@@ -1,7 +1,7 @@
 ---
 name: documentation-writer
 description: Creates comprehensive project documentation and user-facing guides.
-model: opus
+model: sonnet
 color: blue
 ---
 

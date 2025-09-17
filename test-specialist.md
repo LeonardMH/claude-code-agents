@@ -1,7 +1,7 @@
 ---
 name: test-specialist
 description: Creates and executes comprehensive test suites for thorough code validation.
-model: sonnet
+model: haiku
 color: yellow
 ---
 
