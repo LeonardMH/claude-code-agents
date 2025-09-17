@@ -173,8 +173,24 @@ See `handoff-system.md` for complete documentation and agent-specific handoff pa
 
 ## Installation
 
-Drop the `.md` files into your Claude Code agents directory and they'll be
-available for use the next time you start `claude`.
+### Method 1: Git Clone with Symlinks
+Clone this repository and create symlinks to your agents directory for easy updates:
+
+```bash
+# Clone the repository
+git clone https://github.com/LeonardMH/claude-code-agents.git ~/claude-code-agents
+
+# Create symlinks to agents directory
+mkdir -p ~/.claude/agents && ln -sf ~/claude-code-agents/*.md ~/.claude/agents/
+```
+
+To update agents: `cd ~/claude-code-agents && git pull`
+
+### Method 2: Manual Download
+Download individual agent `.md` files from this repository and place them in your Claude Code agents directory (`~/.claude/agents/`). They'll be available for use the next time you start `claude`.
+
+### Directory Structure
+After installation, your `~/.claude/agents/` directory will contain all agent `.md` files and supporting documentation.
 
 ## Workflow Examples
 
