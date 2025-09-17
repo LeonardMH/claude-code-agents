@@ -44,6 +44,17 @@ Agents are organized by color according to their role in the software developmen
 
 ### 🟢 Building & Implementation
 
+#### **cli-designer** (Sonnet)
+**When to use**: Design command-line interfaces with excellent user experience
+- Creates intuitive command structures and argument hierarchies
+- Designs configuration systems with clear precedence rules
+- Generates shell completions and help documentation
+- Ensures consistent error messaging and user guidance
+- Follows progressive disclosure principles for complex CLIs
+- **Reads from**: requirements-analyst, api-designer
+- **Creates**: `.agent-handoffs/cli-designer-<uuid>.md` with CLI specifications
+- **Hands off to**: code-implementer, documentation-writer
+
 #### **code-implementer** (Sonnet)
 **When to use**: Transform requirements into clean, maintainable, production-ready code
 - Implements code following "Make it work → Make it right → Make it fast" principle
@@ -225,6 +236,13 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 6. **code-reviewer** (Sonnet) → Quality assessment and refactoring recommendations
 7. **security-auditor** (Sonnet) → Security vulnerability assessment (for security-sensitive features)
 8. **documentation-writer** (Sonnet) → Create user-facing documentation and API docs
+
+### CLI Tool Development
+1. **requirements-analyst** (Opus) → Define CLI tool requirements and user workflows
+2. **cli-designer** (Sonnet) → Design command structure, arguments, and user interaction patterns
+3. **code-implementer** (Sonnet) → Build the CLI application following design specifications
+4. **test-specialist** (Haiku) → Create CLI integration and command tests
+5. **documentation-writer** (Sonnet) → Generate user guides and man pages
 
 ### Bug Investigation & Fix
 1. **runtime-debugger** (Opus) → Systematic analysis of runtime issue with root cause identification
