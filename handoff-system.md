@@ -7,9 +7,9 @@ All agents communicate through a shared workspace at `.agent-handoffs/` using st
 Format: `<agent-role-name>-<short-uuid>.md`
 
 Examples:
-- `requirements-analyst-a1b2.md`
-- `code-implementer-c3d4.md`
-- `runtime-debugger-e5f6.md`
+- `requirements-analyst-a1b2c3.md`
+- `code-implementer-a2b4c8.md`
+- `runtime-debugger-e1c7g6.md`
 
 ## Agent Workflow
 
