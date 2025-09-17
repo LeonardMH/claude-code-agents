@@ -2,30 +2,14 @@
 
 Based on the existing agents, here are strategic additions to fill workflow gaps:
 
-## **test-generator**
-**When to use**: Creates comprehensive test suites from implemented code
+## **test-specialist**
+**When to use**: Creates and executes comprehensive test suites
 - Generates unit, integration, and edge case tests
-- Follows existing test framework conventions
-- Analyzes code coverage requirements
-- **Reads from**: code-implementer
-- **Hands off to**: test-runner
-
-## **test-runner**
-**When to use**: Executes test suites and analyzes results
-- Runs test suites and reports results
+- Runs test suites and analyzes results
 - Identifies failing tests and coverage gaps
-- Provides detailed failure diagnostics
-- Manages test environments
-- **Reads from**: test-generator, code-implementer
+- Manages test environments and frameworks
+- **Reads from**: code-implementer
 - **Hands off to**: runtime-debugger (for test failures)
-
-## **dependency-manager**
-**When to use**: Analyzes and updates project dependencies
-- Updates project dependencies safely
-- Identifies security vulnerabilities
-- Manages version conflicts and compatibility
-- Suggests dependency upgrades and alternatives
-- **Hands off to**: build-error-analyzer (after updates)
 
 ## **performance-profiler**
 **When to use**: Identifies performance bottlenecks and optimization opportunities
@@ -61,20 +45,12 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 
 ## **documentation-writer**
 **When to use**: Creates comprehensive project documentation
-- Generates user-facing documentation
-- Creates API documentation from code
-- Writes inline code documentation
-- Updates README and setup guides
-- **Reads from**: all agents
+- Generates user-facing documentation and README files
+- Creates API documentation from code specifications
+- Writes inline code documentation and tutorials
+- Updates setup guides and architectural docs
+- **Reads from**: all agents for comprehensive documentation
 
-## **refactoring-specialist**
-**When to use**: Performs large-scale code refactoring and modernization
-- Extracts reusable components and utilities
-- Implements design patterns
-- Modernizes legacy code
-- Reduces technical debt
-- **Reads from**: code-reviewer
-- **Hands off to**: build-error-analyzer
 
 ## **deployment-orchestrator**
 **When to use**: Manages deployment pipelines and infrastructure
@@ -84,6 +60,7 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 - Orchestrates rollbacks and scaling
 - **Reads from**: build-error-analyzer, test-runner
 
+
 ## Complete Workflow Examples
 
 ### Full Feature Development
@@ -91,24 +68,22 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 2. **api-designer** → design API contracts
 3. **database-architect** → design data layer
 4. **code-implementer** → implement feature
-5. **test-generator** → create test suite
-6. **test-runner** → validate implementation
-7. **security-auditor** → security review
-8. **performance-profiler** → optimize performance
-9. **code-reviewer** → final quality check
-10. **documentation-writer** → document feature
-11. **deployment-orchestrator** → deploy to production
+5. **test-specialist** → create and run test suite
+6. **security-auditor** → security review
+7. **performance-profiler** → optimize performance
+8. **code-reviewer** → final quality check
+9. **documentation-writer** → document feature
+10. **deployment-orchestrator** → deploy to production
 
 ### Legacy Code Modernization
-1. **code-reviewer** → assess current state
-2. **git-archaeologist** → understand history
+1. **code-reviewer** → assess current state and recommend improvements
+2. **git-archaeologist** → understand historical context
 3. **security-auditor** → identify vulnerabilities
 4. **performance-profiler** → find bottlenecks
-5. **refactoring-specialist** → modernize code
-6. **dependency-manager** → update dependencies
-7. **test-generator** → add missing tests
-8. **build-error-analyzer** → ensure builds work
-9. **deployment-orchestrator** → safe deployment
+5. **code-implementer** → modernize code based on recommendations
+6. **test-specialist** → add comprehensive test coverage
+7. **build-error-analyzer** → ensure builds work
+8. **deployment-orchestrator** → safe deployment
 
 ### Production Issue Response
 1. **runtime-debugger** → analyze the issue
@@ -116,5 +91,5 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 3. **security-auditor** → rule out security issues
 4. **git-archaeologist** → check recent changes
 5. **code-implementer** → implement hotfix
-6. **test-runner** → validate fix
+6. **test-specialist** → validate fix
 7. **deployment-orchestrator** → emergency deployment
