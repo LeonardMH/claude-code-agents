@@ -57,7 +57,12 @@ Examples:
 - **Handoff to**: code-implementer (for fixes)
 - **File includes**: Vulnerability assessment, remediation priorities, compliance gaps
 
-### 9. documentation-writer
+### 9. performance-profiler
+- **Creates**: Performance analysis and optimization recommendations
+- **Handoff to**: code-implementer (for optimizations)
+- **File includes**: Performance metrics, bottleneck analysis, optimization strategies
+
+### 10. documentation-writer
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables

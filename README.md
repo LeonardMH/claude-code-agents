@@ -74,6 +74,14 @@ inter-agent communication capabilities.
 - **Reads from**: code-implementer
 - **Hands off to**: code-implementer (for fixes)
 
+### **performance-profiler**
+**When to use**: Identifies performance bottlenecks and optimization opportunities
+- Profiles CPU usage, memory consumption, and I/O patterns
+- Analyzes runtime performance patterns and execution flows
+- Identifies slow queries, operations, and algorithmic inefficiencies
+- Suggests targeted optimization strategies
+- **Hands off to**: code-implementer (for optimizations)
+
 ### **documentation-writer**
 **When to use**: Creates comprehensive project documentation and user-facing guides
 - Generates user-facing documentation and README files

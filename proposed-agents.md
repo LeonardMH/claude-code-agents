@@ -2,14 +2,6 @@
 
 Based on the existing agents, here are strategic additions to fill workflow gaps:
 
-## **performance-profiler**
-**When to use**: Identifies performance bottlenecks and optimization opportunities
-- Profiles CPU and memory usage
-- Analyzes runtime performance patterns
-- Identifies slow queries and operations
-- Suggests optimization strategies
-- **Hands off to**: code-implementer (for optimizations)
-
 ## **api-designer**
 **When to use**: Designs RESTful/GraphQL APIs and specifications
 - Creates API specifications (OpenAPI/GraphQL)
