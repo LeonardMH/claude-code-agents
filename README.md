@@ -19,7 +19,9 @@ Agents are organized by color according to their role in the software developmen
 
 ## Available Agents
 
-### **requirements-analyst** (Opus)
+### 🟣 Planning & Architecture
+
+#### **requirements-analyst** (Opus)
 **When to use**: Transform vague user requests into comprehensive requirements and actionable development plans
 - Extracts true problems from requested solutions
 - Defines functional and non-functional requirements (performance, security, usability)
@@ -29,7 +31,7 @@ Agents are organized by color according to their role in the software developmen
 - **Creates**: `requirements.md` with problem statement, user flows, and assumptions
 - **Hands off to**: api-designer, code-implementer
 
-### **api-designer** (Opus)
+#### **api-designer** (Opus)
 **When to use**: Designs logical, consistent APIs and specifications that serve as contracts between system components
 - Creates comprehensive API specifications with method signatures, parameters, and return types
 - Ensures consistency across interface methods and data structures
@@ -40,7 +42,9 @@ Agents are organized by color according to their role in the software developmen
 - **Reads from**: requirements-analyst (when designing from requirements)
 - **Hands off to**: code-implementer
 
-### **code-implementer** (Sonnet)
+### 🟢 Building & Implementation
+
+#### **code-implementer** (Sonnet)
 **When to use**: Transform requirements into clean, maintainable, production-ready code
 - Implements code following "Make it work → Make it right → Make it fast" principle
 - Follows existing codebase conventions and patterns
@@ -50,27 +54,33 @@ Agents are organized by color according to their role in the software developmen
 - **Reads from**: requirements-analyst, api-designer handoffs
 - **Hands off to**: code-reviewer, build-error-analyzer, test-specialist
 
-### **runtime-debugger** (Opus)
-**When to use**: Investigate runtime bugs, crashes, and production issues with systematic analysis
-- Analyzes runtime exceptions, stack traces, and crash dumps
-- Investigates performance issues, memory leaks, and resource problems
-- Debugs race conditions, timing bugs, and concurrency issues
-- Traces user-reported behavioral issues through code execution paths
-- **NOT for**: Build/compilation errors (use build-error-analyzer)
-- **Output**: Clear problem statement, root cause analysis, and specific fix recommendations
-- **Hands off to**: code-implementer (for fixes)
+### 🔵 Knowledge & Documentation
 
-### **build-error-analyzer** (Haiku)
-**When to use**: Build projects and analyze compilation/build errors with automatic system detection
-- Detects build systems automatically (npm/yarn, Maven, Gradle, Make, Cargo, CMake)
-- Executes appropriate build commands and captures output
-- Classifies errors by category (syntax, type, reference, dependency, configuration, linking)
-- Provides specific, actionable fix recommendations for each error
-- **NOT for**: Runtime issues (use runtime-debugger)
-- **Output**: Build status, critical errors, error classification, and fix recommendations
-- **Hands off to**: code-implementer (for fixes)
+#### **documentation-writer** (Sonnet)
+**When to use**: Creates comprehensive project documentation and user-facing guides that make code accessible
+- Generates user-facing documentation, README files, and setup guides
+- Creates API documentation from code specifications with practical examples
+- Writes inline code documentation, tutorials, and architectural documentation
+- Maintains consistency across all documentation using clear, simple language
+- **Writing principles**: Clarity, Completeness, Consistency, Currency, Examples
+- **Analysis process**: Assess → Understand → Plan → Write → Validate
+- **Reads from**: All agent handoffs for comprehensive project context
+- **Output**: Documentation summary, structure overview, key sections, maintenance notes
+- **Hands off to**: Final documentation deliverables and maintenance recommendations
 
-### **code-reviewer** (Sonnet)
+#### **git-archaeologist** (Haiku)
+**When to use**: Search git history for deleted, moved, or modified code artifacts
+- Efficiently searches for deleted or modified functions, variables, classes using `git log -S` and `-G`
+- Tracks code evolution and changes over time with historical context
+- Locates moved or renamed code artifacts using `git log --follow`
+- Provides complete code snippets with commit references and dates
+- **Search strategy**: Interprets intent, chooses appropriate git method, extracts results systematically
+- **Output**: Search summary, historical findings with evolution notes, and commit references
+- **Hands off to**: Any agent needing historical context or code recovery
+
+### 🟡 Quality Assurance
+
+#### **code-reviewer** (Sonnet)
 **When to use**: Review code for maintainability issues, anti-patterns, and quality concerns
 - Identifies code smells and anti-patterns (god objects, long methods, deep nesting, duplicated code)
 - Assesses maintainability, readability, and structural quality
@@ -81,17 +91,7 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Quality assessment with specific file:line references and actionable feedback
 - **Hands off to**: code-implementer (for improvements)
 
-### **git-archaeologist** (Haiku)
-**When to use**: Search git history for deleted, moved, or modified code artifacts
-- Efficiently searches for deleted or modified functions, variables, classes using `git log -S` and `-G`
-- Tracks code evolution and changes over time with historical context
-- Locates moved or renamed code artifacts using `git log --follow`
-- Provides complete code snippets with commit references and dates
-- **Search strategy**: Interprets intent, chooses appropriate git method, extracts results systematically
-- **Output**: Search summary, historical findings with evolution notes, and commit references
-- **Hands off to**: Any agent needing historical context or code recovery
-
-### **test-specialist** (Haiku)
+#### **test-specialist** (Haiku)
 **When to use**: Creates and executes comprehensive test suites for thorough code validation
 - Generates unit, integration, and end-to-end tests following Arrange-Act-Assert pattern
 - Supports multiple frameworks (Jest, Vitest, pytest, Go testing, Rust built-in)
@@ -103,20 +103,9 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Test summary, failed test details, coverage gaps, and performance metrics
 - **Hands off to**: runtime-debugger (for test failures)
 
-### **security-auditor** (Sonnet)
-**When to use**: Scans for security vulnerabilities and compliance issues with defensive security focus
-- Identifies OWASP Top 10 and common security vulnerabilities across web apps, APIs, and databases
-- Reviews authentication, authorization, session management, and access control mechanisms
-- Detects exposed secrets, credentials, and sensitive data using static analysis tools
-- Validates input sanitization, output encoding, and injection prevention measures
-- Assesses cryptographic implementations, SSL/TLS configurations, and secure communication
-- **Assessment areas**: Authentication/Authorization, Data Protection, Infrastructure Security, Code Security
-- **Priority levels**: Critical → High → Medium → Low with specific remediation guidance
-- **Reads from**: code-implementer handoffs
-- **Output**: Executive summary, critical vulnerabilities, detailed findings, and compliance status
-- **Hands off to**: code-implementer (for security fixes)
+### 🟠 Operations & Monitoring
 
-### **performance-profiler** (Sonnet)
+#### **performance-profiler** (Sonnet)
 **When to use**: Identifies performance bottlenecks and optimization opportunities across applications and systems
 - Profiles CPU usage, memory consumption, I/O patterns, and concurrency issues
 - Analyzes runtime performance patterns, execution flows, and resource utilization
@@ -128,17 +117,40 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Performance summary, critical bottlenecks, optimization opportunities, implementation priorities
 - **Hands off to**: code-implementer (for optimizations)
 
-### **documentation-writer** (Sonnet)
-**When to use**: Creates comprehensive project documentation and user-facing guides that make code accessible
-- Generates user-facing documentation, README files, and setup guides
-- Creates API documentation from code specifications with practical examples
-- Writes inline code documentation, tutorials, and architectural documentation
-- Maintains consistency across all documentation using clear, simple language
-- **Writing principles**: Clarity, Completeness, Consistency, Currency, Examples
-- **Analysis process**: Assess → Understand → Plan → Write → Validate
-- **Reads from**: All agent handoffs for comprehensive project context
-- **Output**: Documentation summary, structure overview, key sections, maintenance notes
-- **Hands off to**: Final documentation deliverables and maintenance recommendations
+### 🔴 Incident Response
+
+#### **runtime-debugger** (Opus)
+**When to use**: Investigate runtime bugs, crashes, and production issues with systematic analysis
+- Analyzes runtime exceptions, stack traces, and crash dumps
+- Investigates performance issues, memory leaks, and resource problems
+- Debugs race conditions, timing bugs, and concurrency issues
+- Traces user-reported behavioral issues through code execution paths
+- **NOT for**: Build/compilation errors (use build-error-analyzer)
+- **Output**: Clear problem statement, root cause analysis, and specific fix recommendations
+- **Hands off to**: code-implementer (for fixes)
+
+#### **build-error-analyzer** (Haiku)
+**When to use**: Build projects and analyze compilation/build errors with automatic system detection
+- Detects build systems automatically (npm/yarn, Maven, Gradle, Make, Cargo, CMake)
+- Executes appropriate build commands and captures output
+- Classifies errors by category (syntax, type, reference, dependency, configuration, linking)
+- Provides specific, actionable fix recommendations for each error
+- **NOT for**: Runtime issues (use runtime-debugger)
+- **Output**: Build status, critical errors, error classification, and fix recommendations
+- **Hands off to**: code-implementer (for fixes)
+
+#### **security-auditor** (Sonnet)
+**When to use**: Scans for security vulnerabilities and compliance issues with defensive security focus
+- Identifies OWASP Top 10 and common security vulnerabilities across web apps, APIs, and databases
+- Reviews authentication, authorization, session management, and access control mechanisms
+- Detects exposed secrets, credentials, and sensitive data using static analysis tools
+- Validates input sanitization, output encoding, and injection prevention measures
+- Assesses cryptographic implementations, SSL/TLS configurations, and secure communication
+- **Assessment areas**: Authentication/Authorization, Data Protection, Infrastructure Security, Code Security
+- **Priority levels**: Critical → High → Medium → Low with specific remediation guidance
+- **Reads from**: code-implementer handoffs
+- **Output**: Executive summary, critical vulnerabilities, detailed findings, and compliance status
+- **Hands off to**: code-implementer (for security fixes)
 
 ## Agent Communication
 
