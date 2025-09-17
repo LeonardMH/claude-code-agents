@@ -1,5 +1,5 @@
 ---
-name: requirements-analyst
+name: plan-requirements
 description: Transforms vague requests into comprehensive requirements and actionable development plans.
 model: opus
 color: purple

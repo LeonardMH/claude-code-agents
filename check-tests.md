@@ -1,5 +1,5 @@
 ---
-name: test-specialist
+name: check-tests
 description: Creates and executes comprehensive test suites for thorough code validation.
 model: haiku
 color: yellow

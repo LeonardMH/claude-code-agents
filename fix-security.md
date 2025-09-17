@@ -1,5 +1,5 @@
 ---
-name: security-auditor
+name: fix-security
 description: Scans for security vulnerabilities and compliance issues to ensure defensive security practices.
 model: sonnet
 color: red

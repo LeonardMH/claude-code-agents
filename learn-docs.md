@@ -1,5 +1,5 @@
 ---
-name: documentation-writer
+name: learn-docs
 description: Creates comprehensive project documentation and user-facing guides.
 model: sonnet
 color: blue

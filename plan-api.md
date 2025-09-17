@@ -1,5 +1,5 @@
 ---
-name: api-designer
+name: plan-api
 description: Designs logical, consistent APIs and specifications that serve as contracts between system components.
 model: opus
 color: purple

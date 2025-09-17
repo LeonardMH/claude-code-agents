@@ -1,5 +1,5 @@
 ---
-name: performance-profiler
+name: profile-performance
 description: Identifies performance bottlenecks and optimization opportunities across applications and systems.
 model: sonnet
 color: orange

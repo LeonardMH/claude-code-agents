@@ -7,93 +7,93 @@ All agents communicate through a shared workspace at `.agent-handoffs/` using st
 Format: `<agent-role-name>-<short-uuid>.md`
 
 Examples:
-- `requirements-analyst-a1b2c3.md`
-- `code-implementer-a2b4c8.md`
-- `runtime-debugger-e1c7g6.md`
+- `plan-requirements-a1b2c3.md`
+- `build-code-a2b4c8.md`
+- `fix-runtime-e1c7g6.md`
 
 ## Agent Workflow
 
-### requirements-analyst
+### plan-requirements
 - **Creates**: Project requirements and analysis
-- **Handoff to**: api-designer, code-implementer
+- **Handoff to**: plan-api, build-code
 - **File includes**: Requirements document, critical decisions, open questions
 
-### api-designer
-- **Reads**: requirements-analyst handoffs (when designing from requirements)
+### plan-api
+- **Reads**: plan-requirements handoffs (when designing from requirements)
 - **Creates**: API specifications and interface contracts
-- **Handoff to**: code-implementer
+- **Handoff to**: build-code
 - **File includes**: Interface definitions, data schemas, usage patterns, evolution strategy
 
-### cli-designer
-- **Reads**: requirements-analyst, api-designer handoffs
+### build-cli
+- **Reads**: plan-requirements, plan-api handoffs
 - **Creates**: CLI design specifications
-- **Handoff to**: code-implementer, documentation-writer
+- **Handoff to**: build-code, learn-docs
 - **File includes**: Command structure, argument schemas, config formats, help templates
 
-### gui-architect
-- **Reads**: requirements-analyst, api-designer handoffs
+### build-gui
+- **Reads**: plan-requirements, plan-api handoffs
 - **Creates**: GUI architecture specifications and design systems
-- **Handoff to**: code-implementer, test-specialist, documentation-writer
+- **Handoff to**: build-code, check-tests, learn-docs
 - **File includes**: Component hierarchy, state management patterns, accessibility guidelines, responsive design strategies, framework recommendations
 
-### code-implementer
-- **Reads**: requirements-analyst, api-designer, cli-designer, gui-architect handoffs
+### build-code
+- **Reads**: plan-requirements, plan-api, build-cli, build-gui handoffs
 - **Creates**: Implementation code and documentation
-- **Handoff to**: code-reviewer, build-error-analyzer
+- **Handoff to**: check-quality, fix-build
 - **File includes**: Architecture decisions, key components, testing needs
 
-### runtime-debugger
+### fix-runtime
 - **Creates**: Bug analysis and root cause findings
-- **Handoff to**: code-implementer (for fixes)
+- **Handoff to**: build-code (for fixes)
 - **File includes**: Issue analysis, evidence, reproduction steps, fix recommendations
 
-### build-error-analyzer
+### fix-build
 - **Creates**: Build error analysis and fixes
-- **Handoff to**: code-implementer (for fixes)
+- **Handoff to**: build-code (for fixes)
 - **File includes**: Build config, critical errors, specific fix recommendations
 
-### code-reviewer
-- **Reads**: code-implementer handoffs
+### check-quality
+- **Reads**: build-code handoffs
 - **Creates**: Quality assessment and improvement suggestions
-- **Handoff to**: code-implementer (for improvements)
+- **Handoff to**: build-code (for improvements)
 - **File includes**: Quality assessment, refactoring suggestions, priority levels
 
-### code-explorer
+### learn-codebase
 - **Creates**: Codebase structural analysis and architectural overview
-- **Handoff to**: requirements-analyst (system context), code-implementer (conventions), documentation-writer (architecture)
+- **Handoff to**: plan-requirements (system context), build-code (conventions), learn-docs (architecture)
 - **File includes**: Project structure overview, module inventory, technology stack, architectural patterns, key APIs
 
-### git-archaeologist
+### learn-commits
 - **Creates**: Historical code findings
 - **Handoff to**: Any agent needing historical context
 - **File includes**: Historical code, commit references, evolution patterns
 
-### test-specialist
-- **Reads**: code-implementer handoffs
+### check-tests
+- **Reads**: build-code handoffs
 - **Creates**: Test suites and execution results
-- **Handoff to**: runtime-debugger (for test failures)
+- **Handoff to**: fix-runtime (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
-### security-auditor
-- **Reads**: code-implementer handoffs
+### fix-security
+- **Reads**: build-code handoffs
 - **Creates**: Security vulnerability assessments and compliance reports
-- **Handoff to**: code-implementer (for fixes)
+- **Handoff to**: build-code (for fixes)
 - **File includes**: Vulnerability assessment, remediation priorities, compliance gaps
 
-### performance-profiler
+### profile-performance
 - **Creates**: Performance analysis and optimization recommendations
-- **Handoff to**: code-implementer (for optimizations)
+- **Handoff to**: build-code (for optimizations)
 - **File includes**: Performance metrics, bottleneck analysis, optimization strategies
 
-### documentation-writer
+### learn-docs
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables
 - **File includes**: Documentation structure, key content areas, maintenance recommendations
 
-### spreadsheet-wizard
+### build-spreadsheet
 - **Creates**: Spreadsheet analysis and data extraction results
-- **Handoff to**: requirements-analyst (data context), code-implementer (data integration), documentation-writer (data documentation)
+- **Handoff to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
 - **File includes**: Data structure summary, quality issues found, extraction tools created, recommendations for data handling
 
 ## Handoff File Structure

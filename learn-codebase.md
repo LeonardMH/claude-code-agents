@@ -1,5 +1,5 @@
 ---
-name: code-explorer
+name: learn-codebase
 description: Rapidly explores and maps unfamiliar codebases to provide architectural understanding and structural overview.
 model: haiku
 color: blue

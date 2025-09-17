@@ -1,5 +1,5 @@
 ---
-name: code-implementer
+name: build-code
 description: Transforms requirements into production-ready code following best practices.
 model: sonnet
 color: green

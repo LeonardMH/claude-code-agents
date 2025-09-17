@@ -1,5 +1,5 @@
 ---
-name: gui-architect
+name: build-gui
 description: Designs modern graphical user interfaces with cross-platform compatibility and accessibility.
 model: sonnet
 color: green

@@ -1,5 +1,5 @@
 ---
-name: runtime-debugger
+name: fix-runtime
 description: Investigates runtime bugs, crashes, and production issues to identify root causes.
 model: opus
 color: red

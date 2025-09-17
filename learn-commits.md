@@ -1,5 +1,5 @@
 ---
-name: git-archaeologist
+name: learn-commits
 description: Searches git history to find deleted, moved, or modified code artifacts.
 model: haiku
 color: blue

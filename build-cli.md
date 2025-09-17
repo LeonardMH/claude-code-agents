@@ -1,5 +1,5 @@
 ---
-name: cli-designer
+name: build-cli
 description: Creates intuitive and powerful command-line interfaces with excellent user experience.
 model: sonnet
 color: green

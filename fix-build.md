@@ -1,5 +1,5 @@
 ---
-name: build-error-analyzer
+name: fix-build
 description: Builds projects and analyzes compilation/build errors to provide actionable fixes.
 model: haiku
 color: red

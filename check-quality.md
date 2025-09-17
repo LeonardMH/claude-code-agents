@@ -1,5 +1,5 @@
 ---
-name: code-reviewer
+name: check-quality
 description: Reviews code for maintainability issues, anti-patterns, and quality concerns.
 model: sonnet
 color: yellow
