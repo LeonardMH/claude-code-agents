@@ -2,14 +2,6 @@
 
 Based on the existing agents, here are strategic additions to fill workflow gaps:
 
-## **api-designer**
-**When to use**: Designs RESTful/GraphQL APIs and specifications
-- Creates API specifications (OpenAPI/GraphQL)
-- Ensures API consistency and best practices
-- Designs endpoint structures
-- Documents API contracts
-- **Hands off to**: code-implementer
-
 ## **database-architect**
 **When to use**: Designs database schemas and optimizes queries
 - Designs normalized database schemas

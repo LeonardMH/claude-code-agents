@@ -15,54 +15,60 @@ Examples:
 
 ### 1. requirements-analyst
 - **Creates**: Project requirements and analysis
-- **Handoff to**: code-implementer
+- **Handoff to**: api-designer, code-implementer
 - **File includes**: Requirements document, critical decisions, open questions
 
-### 2. code-implementer
-- **Reads**: requirements-analyst handoffs
+### 2. api-designer
+- **Reads**: requirements-analyst handoffs (when designing from requirements)
+- **Creates**: API specifications and interface contracts
+- **Handoff to**: code-implementer
+- **File includes**: Interface definitions, data schemas, usage patterns, evolution strategy
+
+### 3. code-implementer
+- **Reads**: requirements-analyst, api-designer handoffs
 - **Creates**: Implementation code and documentation
 - **Handoff to**: code-reviewer, build-error-analyzer
 - **File includes**: Architecture decisions, key components, testing needs
 
-### 3. runtime-debugger
+### 4. runtime-debugger
 - **Creates**: Bug analysis and root cause findings
 - **Handoff to**: code-implementer (for fixes)
 - **File includes**: Issue analysis, evidence, reproduction steps, fix recommendations
 
-### 4. build-error-analyzer
+### 5. build-error-analyzer
 - **Creates**: Build error analysis and fixes
 - **Handoff to**: code-implementer (for fixes)
 - **File includes**: Build config, critical errors, specific fix recommendations
 
-### 5. code-reviewer
+### 6. code-reviewer
 - **Reads**: code-implementer handoffs
 - **Creates**: Quality assessment and improvement suggestions
 - **Handoff to**: code-implementer (for improvements)
 - **File includes**: Quality assessment, refactoring suggestions, priority levels
 
-### 6. git-archaeologist
+### 7. git-archaeologist
 - **Creates**: Historical code findings
 - **Handoff to**: Any agent needing historical context
 - **File includes**: Historical code, commit references, evolution patterns
 
-### 7. test-specialist
+### 8. test-specialist
 - **Reads**: code-implementer handoffs
 - **Creates**: Test suites and execution results
 - **Handoff to**: runtime-debugger (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
-### 8. security-auditor
+### 9. security-auditor
 - **Reads**: code-implementer handoffs
 - **Creates**: Security vulnerability assessments and compliance reports
 - **Handoff to**: code-implementer (for fixes)
 - **File includes**: Vulnerability assessment, remediation priorities, compliance gaps
 
-### 9. performance-profiler
+### 10. performance-profiler
 - **Creates**: Performance analysis and optimization recommendations
 - **Handoff to**: code-implementer (for optimizations)
 - **File includes**: Performance metrics, bottleneck analysis, optimization strategies
 
-### 10. documentation-writer
+### 11. documentation-writer
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables

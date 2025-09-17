@@ -12,6 +12,15 @@ inter-agent communication capabilities.
 - Defines functional and non-functional requirements
 - Identifies edge cases and dependencies
 - Creates structured requirements documents
+- **Hands off to**: api-designer, code-implementer
+
+### **api-designer**
+**When to use**: Designs logical, consistent APIs and specifications
+- Creates API specifications and interface contracts
+- Ensures API consistency and best practices
+- Designs data models and validation schemas
+- Documents API usage patterns and evolution strategy
+- **Reads from**: requirements-analyst (when designing from requirements)
 - **Hands off to**: code-implementer
 
 ### **code-implementer**
@@ -20,7 +29,7 @@ inter-agent communication capabilities.
 - Follows existing codebase conventions
 - Handles error cases and validation
 - Creates clean, maintainable code
-- **Reads from**: requirements-analyst
+- **Reads from**: requirements-analyst, api-designer
 - **Hands off to**: code-reviewer, build-error-analyzer
 
 ### **runtime-debugger**
@@ -109,11 +118,12 @@ available for use the next time you start `claude`.
 
 ### New Feature Development
 1. **requirements-analyst** → clarify requirements
-2. **code-implementer** → build the feature
-3. **build-error-analyzer** → ensure it builds
-4. **test-specialist** → create and run tests
-5. **code-reviewer** → quality check
-6. **documentation-writer** → document the feature
+2. **api-designer** → design interfaces (if needed)
+3. **code-implementer** → build the feature
+4. **build-error-analyzer** → ensure it builds
+5. **test-specialist** → create and run tests
+6. **code-reviewer** → quality check
+7. **documentation-writer** → document the feature
 
 ### Bug Investigation
 1. **runtime-debugger** → analyze the issue
