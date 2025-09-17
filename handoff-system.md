@@ -30,8 +30,14 @@ Examples:
 - **Handoff to**: code-implementer, documentation-writer
 - **File includes**: Command structure, argument schemas, config formats, help templates
 
+### gui-architect
+- **Reads**: requirements-analyst, api-designer handoffs
+- **Creates**: GUI architecture specifications and design systems
+- **Handoff to**: code-implementer, test-specialist, documentation-writer
+- **File includes**: Component hierarchy, state management patterns, accessibility guidelines, responsive design strategies, framework recommendations
+
 ### code-implementer
-- **Reads**: requirements-analyst, api-designer, cli-designer handoffs
+- **Reads**: requirements-analyst, api-designer, cli-designer, gui-architect handoffs
 - **Creates**: Implementation code and documentation
 - **Handoff to**: code-reviewer, build-error-analyzer
 - **File includes**: Architecture decisions, key components, testing needs

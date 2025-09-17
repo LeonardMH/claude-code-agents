@@ -55,6 +55,17 @@ Agents are organized by color according to their role in the software developmen
 - **Creates**: `.agent-handoffs/cli-designer-<uuid>.md` with CLI specifications
 - **Hands off to**: code-implementer, documentation-writer
 
+#### **gui-architect** (Sonnet)
+**When to use**: Design modern graphical user interfaces with cross-platform compatibility and accessibility
+- Designs component hierarchies and state management patterns
+- Selects appropriate frameworks and ensures cross-platform compatibility
+- Defines accessibility standards and responsive design strategies
+- Optimizes for performance and maintainability
+- Creates comprehensive UI specifications and design systems
+- **Reads from**: requirements-analyst, api-designer
+- **Creates**: `.agent-handoffs/gui-architect-<uuid>.md` with GUI specifications
+- **Hands off to**: code-implementer, test-specialist, documentation-writer
+
 #### **code-implementer** (Sonnet)
 **When to use**: Transform requirements into clean, maintainable, production-ready code
 - Implements code following "Make it work → Make it right → Make it fast" principle
@@ -243,6 +254,13 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **code-implementer** (Sonnet) → Build the CLI application following design specifications
 4. **test-specialist** (Haiku) → Create CLI integration and command tests
 5. **documentation-writer** (Sonnet) → Generate user guides and man pages
+
+### GUI Application Development
+1. **requirements-analyst** (Opus) → Define UI requirements and user stories
+2. **gui-architect** (Sonnet) → Design component architecture, state management, and accessibility patterns
+3. **code-implementer** (Sonnet) → Build UI components and application logic
+4. **test-specialist** (Haiku) → Create GUI tests and validate accessibility
+5. **documentation-writer** (Sonnet) → Create user guides and component documentation
 
 ### Bug Investigation & Fix
 1. **runtime-debugger** (Opus) → Systematic analysis of runtime issue with root cause identification
