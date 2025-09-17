@@ -51,6 +51,12 @@ Examples:
 - **Handoff to**: runtime-debugger (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
+### 8. documentation-writer
+- **Reads**: All agent handoffs for comprehensive project context
+- **Creates**: Documentation summaries and maintenance guides
+- **Handoff to**: Final documentation deliverables
+- **File includes**: Documentation structure, key content areas, maintenance recommendations
+
 ## Handoff File Structure
 
 Each handoff file should contain:

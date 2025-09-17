@@ -65,6 +65,15 @@ inter-agent communication capabilities.
 - **Reads from**: code-implementer
 - **Hands off to**: runtime-debugger (for test failures)
 
+### **documentation-writer**
+**When to use**: Creates comprehensive project documentation and user-facing guides
+- Generates user-facing documentation and README files
+- Creates API documentation from code specifications
+- Writes inline code documentation and tutorials
+- Updates setup guides and architectural documentation
+- **Reads from**: All agents for comprehensive documentation
+- **Hands off to**: Final documentation deliverables
+
 ## Agent Communication
 
 All agents communicate through the `.agent-handoffs/` shared workspace using structured markdown files. This enables:
@@ -87,6 +96,7 @@ available for use the next time you start `claude`.
 3. **build-error-analyzer** → ensure it builds
 4. **test-specialist** → create and run tests
 5. **code-reviewer** → quality check
+6. **documentation-writer** → document the feature
 
 ### Bug Investigation
 1. **runtime-debugger** → analyze the issue

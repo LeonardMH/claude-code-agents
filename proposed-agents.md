@@ -34,14 +34,6 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 - Analyzes database performance
 - **Hands off to**: code-implementer
 
-## **documentation-writer**
-**When to use**: Creates comprehensive project documentation
-- Generates user-facing documentation and README files
-- Creates API documentation from code specifications
-- Writes inline code documentation and tutorials
-- Updates setup guides and architectural docs
-- **Reads from**: all agents for comprehensive documentation
-
 
 ## **deployment-orchestrator**
 **When to use**: Manages deployment pipelines and infrastructure
@@ -63,8 +55,7 @@ Based on the existing agents, here are strategic additions to fill workflow gaps
 6. **security-auditor** → security review
 7. **performance-profiler** → optimize performance
 8. **code-reviewer** → final quality check
-9. **documentation-writer** → document feature
-10. **deployment-orchestrator** → deploy to production
+9. **deployment-orchestrator** → deploy to production
 
 ### Legacy Code Modernization
 1. **code-reviewer** → assess current state and recommend improvements
