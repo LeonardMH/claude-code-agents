@@ -51,7 +51,13 @@ Examples:
 - **Handoff to**: runtime-debugger (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
-### 8. documentation-writer
+### 8. security-auditor
+- **Reads**: code-implementer handoffs
+- **Creates**: Security vulnerability assessments and compliance reports
+- **Handoff to**: code-implementer (for fixes)
+- **File includes**: Vulnerability assessment, remediation priorities, compliance gaps
+
+### 9. documentation-writer
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables

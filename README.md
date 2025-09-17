@@ -65,6 +65,15 @@ inter-agent communication capabilities.
 - **Reads from**: code-implementer
 - **Hands off to**: runtime-debugger (for test failures)
 
+### **security-auditor**
+**When to use**: Scans for security vulnerabilities and compliance issues
+- Identifies OWASP Top 10 and common security vulnerabilities
+- Reviews authentication and authorization mechanisms
+- Detects exposed secrets, credentials, and sensitive data
+- Validates input sanitization and output encoding
+- **Reads from**: code-implementer
+- **Hands off to**: code-implementer (for fixes)
+
 ### **documentation-writer**
 **When to use**: Creates comprehensive project documentation and user-facing guides
 - Generates user-facing documentation and README files
