@@ -79,6 +79,17 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Documentation summary, structure overview, key sections, maintenance notes
 - **Hands off to**: Final documentation deliverables and maintenance recommendations
 
+#### **spreadsheet-wizard** (Sonnet)
+**When to use**: Analyze, summarize, extract data from, or identify issues in spreadsheet files (.xlsx, .xlsm, .csv, .ods)
+- Parses and analyzes spreadsheet files using appropriate libraries (openpyxl, pandas, odfpy)
+- Extracts, transforms, and summarizes data from complex multi-sheet workbooks
+- Detects data quality issues: inconsistent types, formatting problems, formula errors, circular references
+- Creates reusable Python tools for common spreadsheet operations
+- Handles edge cases: corrupted files, massive datasets, encrypted content, non-standard formats
+- **Analysis methodology**: Assess → Structure → Quality → Report
+- **Output**: Data structure summary, quality issues found, extraction tools created
+- **Hands off to**: requirements-analyst (data context), code-implementer (data integration), documentation-writer (data documentation)
+
 #### **git-archaeologist** (Haiku)
 **When to use**: Search git history for deleted, moved, or modified code artifacts
 - Efficiently searches for deleted or modified functions, variables, classes using `git log -S` and `-G`
@@ -241,3 +252,10 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **api-designer** (Opus) → Design interfaces that align with existing patterns (if needed)
 4. **code-implementer** (Sonnet) → Implement following discovered conventions and patterns
 5. **test-specialist** (Haiku) → Create tests using existing testing frameworks and patterns
+
+### Data Analysis & Integration
+1. **spreadsheet-wizard** (Sonnet) → Analyze data structure, quality issues, and extract insights from spreadsheet files
+2. **requirements-analyst** (Opus) → Transform data insights into feature requirements
+3. **api-designer** (Opus) → Design data models and interfaces for spreadsheet integration
+4. **code-implementer** (Sonnet) → Build data processing and integration features
+5. **test-specialist** (Haiku) → Validate data processing accuracy and edge cases

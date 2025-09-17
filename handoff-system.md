@@ -79,6 +79,11 @@ Examples:
 - **Handoff to**: Final documentation deliverables
 - **File includes**: Documentation structure, key content areas, maintenance recommendations
 
+### 13. spreadsheet-wizard
+- **Creates**: Spreadsheet analysis and data extraction results
+- **Handoff to**: requirements-analyst (data context), code-implementer (data integration), documentation-writer (data documentation)
+- **File includes**: Data structure summary, quality issues found, extraction tools created, recommendations for data handling
+
 ## Handoff File Structure
 
 Each handoff file should contain:
