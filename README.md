@@ -56,6 +56,15 @@ inter-agent communication capabilities.
 - Provides historical context for decisions
 - **Hands off to**: Any agent needing historical context
 
+### **test-specialist**
+**When to use**: Creates and executes comprehensive test suites
+- Generates unit, integration, and edge case tests
+- Runs test suites and analyzes results
+- Identifies failing tests and coverage gaps
+- Manages test environments and frameworks
+- **Reads from**: code-implementer
+- **Hands off to**: runtime-debugger (for test failures)
+
 ## Agent Communication
 
 All agents communicate through the `.agent-handoffs/` shared workspace using structured markdown files. This enables:
@@ -76,8 +85,8 @@ available for use the next time you start `claude`.
 1. **requirements-analyst** → clarify requirements
 2. **code-implementer** → build the feature
 3. **build-error-analyzer** → ensure it builds
-4. **code-reviewer** → quality check
-5. **test-generator** → create tests
+4. **test-specialist** → create and run tests
+5. **code-reviewer** → quality check
 
 ### Bug Investigation
 1. **runtime-debugger** → analyze the issue

@@ -2,15 +2,6 @@
 
 Based on the existing agents, here are strategic additions to fill workflow gaps:
 
-## **test-specialist**
-**When to use**: Creates and executes comprehensive test suites
-- Generates unit, integration, and edge case tests
-- Runs test suites and analyzes results
-- Identifies failing tests and coverage gaps
-- Manages test environments and frameworks
-- **Reads from**: code-implementer
-- **Hands off to**: runtime-debugger (for test failures)
-
 ## **performance-profiler**
 **When to use**: Identifies performance bottlenecks and optimization opportunities
 - Profiles CPU and memory usage

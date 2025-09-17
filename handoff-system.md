@@ -45,6 +45,12 @@ Examples:
 - **Handoff to**: Any agent needing historical context
 - **File includes**: Historical code, commit references, evolution patterns
 
+### 7. test-specialist
+- **Reads**: code-implementer handoffs
+- **Creates**: Test suites and execution results
+- **Handoff to**: runtime-debugger (for test failures)
+- **File includes**: Test coverage analysis, failing test details, testing strategy
+
 ## Handoff File Structure
 
 Each handoff file should contain:
