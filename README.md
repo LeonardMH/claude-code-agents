@@ -4,6 +4,19 @@ A specialized collection of focused agents for software development workflows.
 Each agent handles a specific aspect of development with clear boundaries and
 inter-agent communication capabilities.
 
+## Color Scheme
+
+Agents are organized by color according to their role in the software development lifecycle:
+
+| Color | Role | Agents |
+|-------|------|---------|
+| 🟣 Purple | Planning & Architecture | requirements-analyst, api-designer |
+| 🟢 Green | Building & Implementation | code-implementer |
+| 🔵 Blue | Knowledge & Documentation | documentation-writer, git-archaeologist |
+| 🟡 Yellow | Quality Assurance | code-reviewer, test-specialist |
+| 🟠 Orange | Operations & Monitoring | performance-profiler |
+| 🔴 Red | Incident Response | runtime-debugger, build-error-analyzer, security-auditor |
+
 ## Available Agents
 
 ### **requirements-analyst**
