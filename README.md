@@ -56,6 +56,17 @@ Agents are organized by color according to their role in the software developmen
 
 ### 🔵 Knowledge & Documentation
 
+#### **code-explorer** (Haiku)
+**When to use**: Rapidly explore and map unfamiliar codebases to provide architectural understanding and structural overview
+- Maps project directory structure and organization patterns using fast tooling (fd, rg, tree)
+- Identifies key modules, packages, and their purposes with API surface discovery
+- Recognizes architectural patterns (MVC, microservices, layered architecture)
+- Maps dependencies, technology stack, and module relationships
+- Discovers entry points, configuration files, and build systems
+- **Exploration strategy**: Structure → Patterns → Dependencies → Entry Points → Technology Detection
+- **Output**: Project overview, module inventory, architecture patterns, technology stack summary
+- **Hands off to**: requirements-analyst (system context), code-implementer (conventions), documentation-writer (architecture)
+
 #### **documentation-writer** (Sonnet)
 **When to use**: Creates comprehensive project documentation and user-facing guides that make code accessible
 - Generates user-facing documentation, README files, and setup guides
@@ -218,7 +229,15 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 4. **code-reviewer** (Sonnet) → Review optimized code for maintainability
 
 ### Legacy Code Analysis
-1. **git-archaeologist** (Haiku) → Search for historical implementations and evolution patterns
-2. **code-reviewer** (Sonnet) → Assess current code quality and identify improvement opportunities
-3. **security-auditor** (Sonnet) → Check for security vulnerabilities in legacy code
-4. **documentation-writer** (Sonnet) → Document findings and create improvement roadmap
+1. **code-explorer** (Haiku) → Map current codebase structure and identify key architectural patterns
+2. **git-archaeologist** (Haiku) → Search for historical implementations and evolution patterns
+3. **code-reviewer** (Sonnet) → Assess current code quality and identify improvement opportunities
+4. **security-auditor** (Sonnet) → Check for security vulnerabilities in legacy code
+5. **documentation-writer** (Sonnet) → Document findings and create improvement roadmap
+
+### Unfamiliar Codebase Integration
+1. **code-explorer** (Haiku) → Rapidly map project structure, modules, and architectural patterns
+2. **requirements-analyst** (Opus) → Analyze how new requirements fit within existing architecture
+3. **api-designer** (Opus) → Design interfaces that align with existing patterns (if needed)
+4. **code-implementer** (Sonnet) → Implement following discovered conventions and patterns
+5. **test-specialist** (Haiku) → Create tests using existing testing frameworks and patterns

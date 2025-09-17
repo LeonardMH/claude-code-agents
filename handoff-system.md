@@ -46,29 +46,34 @@ Examples:
 - **Handoff to**: code-implementer (for improvements)
 - **File includes**: Quality assessment, refactoring suggestions, priority levels
 
-### 7. git-archaeologist
+### 7. code-explorer
+- **Creates**: Codebase structural analysis and architectural overview
+- **Handoff to**: requirements-analyst (system context), code-implementer (conventions), documentation-writer (architecture)
+- **File includes**: Project structure overview, module inventory, technology stack, architectural patterns, key APIs
+
+### 8. git-archaeologist
 - **Creates**: Historical code findings
 - **Handoff to**: Any agent needing historical context
 - **File includes**: Historical code, commit references, evolution patterns
 
-### 8. test-specialist
+### 9. test-specialist
 - **Reads**: code-implementer handoffs
 - **Creates**: Test suites and execution results
 - **Handoff to**: runtime-debugger (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
-### 9. security-auditor
+### 10. security-auditor
 - **Reads**: code-implementer handoffs
 - **Creates**: Security vulnerability assessments and compliance reports
 - **Handoff to**: code-implementer (for fixes)
 - **File includes**: Vulnerability assessment, remediation priorities, compliance gaps
 
-### 10. performance-profiler
+### 11. performance-profiler
 - **Creates**: Performance analysis and optimization recommendations
 - **Handoff to**: code-implementer (for optimizations)
 - **File includes**: Performance metrics, bottleneck analysis, optimization strategies
 
-### 11. documentation-writer
+### 12. documentation-writer
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables
