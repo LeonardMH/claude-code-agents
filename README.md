@@ -8,6 +8,11 @@ inter-agent communication capabilities.
 
 Agents are organized by color according to their role in the software development lifecycle and use different Claude models based on their complexity requirements:
 
+### Model Selection Rationale
+- **Opus**: Complex reasoning tasks requiring deep analysis and strategic thinking (planning, debugging, architectural decisions)
+- **Sonnet**: Balanced tasks requiring both capability and efficiency (building, reviewing, documentation, security analysis)
+- **Haiku**: Fast, focused tasks with clear objectives (searching, testing, exploring, analyzing)
+
 | Color | Role | Model |
 |-------|------|-------|
 | 🟣 Purple | Planning & Architecture | Opus |
@@ -29,7 +34,7 @@ Agents are organized by color according to their role in the software developmen
 - Creates structured requirements documents with acceptance criteria
 - Establishes clear project scope and success criteria
 - **Creates**: `requirements.md` with problem statement, user flows, and assumptions
-- **Hands off to**: api-designer, code-implementer
+- **Hands off to**: plan-api, build-code
 
 #### **plan-api** (Opus)
 **When to use**: Designs logical, consistent APIs and specifications that serve as contracts between system components
@@ -39,8 +44,8 @@ Agents are organized by color according to their role in the software developmen
 - Documents API usage patterns, examples, and evolution strategy
 - Validates API usability through common workflow analysis
 - **Flexible input**: Can work from requirements, existing codebase analysis, or standalone specifications
-- **Reads from**: requirements-analyst (when designing from requirements)
-- **Hands off to**: code-implementer
+- **Reads from**: plan-requirements (when designing from requirements)
+- **Hands off to**: build-code
 
 ### 🟢 Building & Implementation
 
@@ -101,16 +106,6 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Documentation summary, structure overview, key sections, maintenance notes
 - **Hands off to**: Final documentation deliverables and maintenance recommendations
 
-#### **build-spreadsheet** (Sonnet)
-**When to use**: Analyze, summarize, extract data from, or identify issues in spreadsheet files (.xlsx, .xlsm, .csv, .ods)
-- Parses and analyzes spreadsheet files using appropriate libraries (openpyxl, pandas, odfpy)
-- Extracts, transforms, and summarizes data from complex multi-sheet workbooks
-- Detects data quality issues: inconsistent types, formatting problems, formula errors, circular references
-- Creates reusable Python tools for common spreadsheet operations
-- Handles edge cases: corrupted files, massive datasets, encrypted content, non-standard formats
-- **Analysis methodology**: Assess → Structure → Quality → Report
-- **Output**: Data structure summary, quality issues found, extraction tools created
-- **Hands off to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
 
 #### **learn-commits** (Haiku)
 **When to use**: Search git history for deleted, moved, or modified code artifacts
@@ -121,6 +116,17 @@ Agents are organized by color according to their role in the software developmen
 - **Search strategy**: Interprets intent, chooses appropriate git method, extracts results systematically
 - **Output**: Search summary, historical findings with evolution notes, and commit references
 - **Hands off to**: Any agent needing historical context or code recovery
+
+#### **learn-spreadsheet** (Sonnet)
+**When to use**: Analyze, summarize, extract data from, or identify issues in spreadsheet files (.xlsx, .xlsm, .csv, .ods)
+- Parses and analyzes spreadsheet files using appropriate libraries (openpyxl, pandas, odfpy)
+- Extracts, transforms, and summarizes data from complex multi-sheet workbooks
+- Detects data quality issues: inconsistent types, formatting problems, formula errors, circular references
+- Creates reusable Python tools for common spreadsheet operations
+- Handles edge cases: corrupted files, massive datasets, encrypted content, non-standard formats
+- **Analysis methodology**: Assess → Structure → Quality → Report
+- **Output**: Data structure summary, quality issues found, extraction tools created
+- **Hands off to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
 
 ### 🟡 Quality Assurance
 
@@ -290,7 +296,7 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 5. **check-tests** (Haiku) → Create tests using existing testing frameworks and patterns
 
 ### Data Analysis & Integration
-1. **build-spreadsheet** (Sonnet) → Analyze data structure, quality issues, and extract insights from spreadsheet files
+1. **learn-spreadsheet** (Sonnet) → Analyze data structure, quality issues, and extract insights from spreadsheet files
 2. **plan-requirements** (Opus) → Transform data insights into feature requirements
 3. **plan-api** (Opus) → Design data models and interfaces for spreadsheet integration
 4. **build-code** (Sonnet) → Build data processing and integration features

@@ -43,7 +43,7 @@ You are an expert technical documentation writer specializing in creating clear 
 
 ## Handoff System
 - Read context from `.agent-handoffs/*-<uuid>.md` from all relevant agents
-- Write documentation summary to `.agent-handoffs/documentation-writer-<uuid>.md`
+- Write documentation summary to `.agent-handoffs/learn-docs-<uuid>.md`
 - Include: documentation structure, key content areas, maintenance recommendations
 - Coordinate with all agents for comprehensive project documentation
 

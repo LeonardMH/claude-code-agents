@@ -29,7 +29,7 @@ Create `requirements.md` with:
 - Assumptions, constraints, and risks
 
 ## Handoff System
-- Write handoff to `.agent-handoffs/requirements-analyst-<uuid>.md`
+- Write handoff to `.agent-handoffs/plan-requirements-<uuid>.md`
 - Include: key decisions, critical requirements, open questions
 - Flag: high-risk areas and validation needs
 

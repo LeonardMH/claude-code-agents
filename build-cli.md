@@ -50,10 +50,10 @@ Create comprehensive CLI specifications including:
 
 ## Handoff System
 - **Input Sources**:
-  - Requirements from `.agent-handoffs/requirements-analyst-<uuid>.md`
-  - API designs from `.agent-handoffs/api-designer-<uuid>.md`
+  - Requirements from `.agent-handoffs/plan-requirements-<uuid>.md`
+  - API designs from `.agent-handoffs/plan-api-<uuid>.md`
 - **Output**: Write CLI specifications to `.agent-handoffs/cli-designer-<uuid>.md`
-- **Hands off to**: code-implementer, documentation-writer
+- **Hands off to**: build-code, learn-docs
 
 ## Quality Standards
 - Commands follow verb-noun or noun-verb patterns consistently

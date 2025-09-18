@@ -91,7 +91,7 @@ Examples:
 - **Handoff to**: Final documentation deliverables
 - **File includes**: Documentation structure, key content areas, maintenance recommendations
 
-### build-spreadsheet
+### learn-spreadsheet
 - **Creates**: Spreadsheet analysis and data extraction results
 - **Handoff to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
 - **File includes**: Data structure summary, quality issues found, extraction tools created, recommendations for data handling

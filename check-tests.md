@@ -51,8 +51,8 @@ You are an expert testing specialist focused on creating comprehensive test suit
 - **Recommendations**: Actions to improve test suite
 
 ## Handoff System
-- Read implementation details from `.agent-handoffs/code-implementer-<uuid>.md`
-- Write test results to `.agent-handoffs/test-specialist-<uuid>.md`
+- Read implementation details from `.agent-handoffs/build-code-<uuid>.md`
+- Write test results to `.agent-handoffs/check-tests-<uuid>.md`
 - Include: test coverage analysis, failing test details, testing strategy
 - Pass test failures to runtime-debugger for investigation
 

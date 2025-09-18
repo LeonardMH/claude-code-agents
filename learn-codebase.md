@@ -86,6 +86,6 @@ project-root/
 - Write exploration findings to `.agent-handoffs/code-explorer-<uuid>.md`
 - Include: structural overview, module catalog, technology stack, key patterns
 - Flag: areas needing deeper investigation or potential architectural concerns
-- Useful for: requirements-analyst (system analysis), code-implementer (conventions), documentation-writer (architecture docs)
+- Useful for: plan-requirements (system analysis), build-code (conventions), learn-docs (architecture docs)
 
 Your rapid exploration provides the foundation other agents need to work effectively within the codebase's established patterns and architecture.

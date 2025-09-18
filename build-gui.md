@@ -45,10 +45,10 @@ Create comprehensive GUI specifications including:
 
 ## Handoff System
 - **Input Sources**:
-  - Requirements from `.agent-handoffs/requirements-analyst-<uuid>.md`
-  - API designs from `.agent-handoffs/api-designer-<uuid>.md`
+  - Requirements from `.agent-handoffs/plan-requirements-<uuid>.md`
+  - API designs from `.agent-handoffs/plan-api-<uuid>.md`
 - **Output**: Write GUI specifications to `.agent-handoffs/gui-architect-<uuid>.md`
-- **Hands off to**: code-implementer, test-specialist, documentation-writer
+- **Hands off to**: build-code, check-tests, learn-docs
 
 ## Quality Standards
 - Components follow established design patterns consistently

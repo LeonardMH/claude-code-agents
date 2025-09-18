@@ -37,11 +37,11 @@ You are an expert API designer specializing in creating logical, consistent inte
 
 ## Handoff System
 - **Input Sources** (flexible based on task):
-  - Requirements from `.agent-handoffs/requirements-analyst-<uuid>.md` when designing from requirements
+  - Requirements from `.agent-handoffs/plan-requirements-<uuid>.md` when designing from requirements
   - Direct analysis of existing codebase when designing for consistency
   - User specifications when creating standalone API designs
-- **Output**: Write API specifications to `.agent-handoffs/api-designer-<uuid>.md`
-- **Hands off to**: code-implementer for implementation
+- **Output**: Write API specifications to `.agent-handoffs/plan-api-<uuid>.md`
+- **Hands off to**: build-code for implementation
 
 ## Output Deliverables
 Create comprehensive API specifications including:
