@@ -42,8 +42,20 @@ Examples:
 - **Handoff to**: build-code, check-tests, learn-docs
 - **File includes**: Protocol definitions, driver APIs, hardware abstraction interfaces, testing strategies
 
+### build-slides
+- **Reads**: plan-requirements, learn-slides handoffs
+- **Creates**: Presentation design specifications and template systems
+- **Handoff to**: build-code (for interactive elements), learn-docs, check-ui
+- **File includes**: Slide structure, visual design system, template specifications, data visualization requirements, accessibility guidelines
+
+### build-spreadsheet
+- **Reads**: plan-requirements, learn-spreadsheet handoffs
+- **Creates**: Spreadsheet architecture specifications and formula documentation
+- **Handoff to**: build-code (for integrations), check-tests, learn-docs
+- **File includes**: Workbook structure, data model design, formula documentation, validation rules, automation specifications
+
 ### build-code
-- **Reads**: plan-requirements, plan-api, build-cli, build-gui, build-hardware handoffs
+- **Reads**: plan-requirements, plan-api, build-cli, build-gui, build-hardware, build-slides, build-spreadsheet handoffs
 - **Creates**: Implementation code and documentation
 - **Handoff to**: check-quality, fix-build
 - **File includes**: Architecture decisions, key components, testing needs
@@ -102,6 +114,11 @@ Examples:
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables
 - **File includes**: Documentation structure, key content areas, maintenance recommendations
+
+### learn-slides
+- **Creates**: Presentation analysis and content extraction results
+- **Handoff to**: plan-requirements (presentation context), build-slides (template creation), learn-docs (presentation documentation)
+- **File includes**: Presentation structure summary, content extraction, design patterns identified, branding elements found
 
 ### learn-spreadsheet
 - **Creates**: Spreadsheet analysis and data extraction results

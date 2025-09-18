@@ -92,6 +92,28 @@ Agents are organized by color according to their role in the software developmen
 - **Creates**: `.agent-handoffs/build-hardware-<uuid>.md` with hardware specifications
 - **Hands off to**: build-code, check-tests, learn-docs
 
+#### **build-slides** (Sonnet)
+**When to use**: Design and create professional presentations with compelling visual storytelling and accessibility
+- Creates slide hierarchies and information architecture for presentations
+- Implements effective data visualizations and infographics
+- Designs presentation templates and visual design systems
+- Ensures accessibility compliance and cross-platform compatibility
+- Optimizes presentations for different delivery contexts (in-person, virtual, self-guided)
+- **Reads from**: plan-requirements, learn-slides handoffs
+- **Creates**: `.agent-handoffs/build-slides-<uuid>.md` with presentation specifications
+- **Hands off to**: build-code (for interactive elements), learn-docs, check-ui
+
+#### **build-spreadsheet** (Sonnet)
+**When to use**: Create powerful, maintainable spreadsheets with robust formulas, data models, and automation
+- Designs logical spreadsheet structures and data models
+- Implements complex formulas, calculations, and data processing logic
+- Creates automated workflows with macros and scripting
+- Builds reusable templates and standardized formats
+- Ensures data integrity, validation, and error handling
+- **Reads from**: plan-requirements, learn-spreadsheet handoffs
+- **Creates**: `.agent-handoffs/build-spreadsheet-<uuid>.md` with spreadsheet specifications
+- **Hands off to**: build-code (for integrations), check-tests, learn-docs
+
 ### 🔵 Knowledge & Documentation
 
 #### **learn-codebase** (Haiku)
@@ -127,6 +149,17 @@ Agents are organized by color according to their role in the software developmen
 - **Search strategy**: Interprets intent, chooses appropriate git method, extracts results systematically
 - **Output**: Search summary, historical findings with evolution notes, and commit references
 - **Hands off to**: Any agent needing historical context or code recovery
+
+#### **learn-slides** (Haiku)
+**When to use**: Analyze, understand, or extract information from presentation files (.pptx, .odp, .key, .pdf presentations)
+- Parses and analyzes presentations using appropriate libraries (python-pptx, odfpy, PyPDF2)
+- Extracts content, images, charts, and multimedia from slides
+- Identifies design patterns, color schemes, branding elements, and template usage
+- Analyzes slide structure, hierarchies, and content organization
+- Categorizes slide types and assesses design consistency
+- **Analysis methodology**: Assess → Structure → Content → Design → Report
+- **Output**: Presentation structure summary, content extraction, design patterns identified
+- **Hands off to**: plan-requirements (presentation context), build-slides (template creation), learn-docs (presentation documentation)
 
 #### **learn-spreadsheet** (Sonnet)
 **When to use**: Analyze, summarize, extract data from, or identify issues in spreadsheet files (.xlsx, .xlsm, .csv, .ods)
@@ -331,3 +364,28 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **plan-api** (Opus) → Design data models and interfaces for spreadsheet integration
 4. **build-code** (Sonnet) → Build data processing and integration features
 5. **check-tests** (Haiku) → Validate data processing accuracy and edge cases
+
+### Presentation Creation & Automation
+1. **plan-requirements** (Opus) → Define presentation objectives, audience, and content requirements
+2. **learn-slides** (Haiku) → Analyze existing templates, brand guidelines, or reference presentations
+3. **build-slides** (Sonnet) → Design presentation structure, templates, and visual hierarchy
+4. **build-code** (Sonnet) → Generate dynamic content, data visualizations, or interactive elements
+5. **check-ui** (Haiku) → Validate accessibility and cross-platform compatibility
+6. **learn-docs** (Sonnet) → Document presentation templates and usage guidelines
+
+### Spreadsheet Development & Automation
+1. **plan-requirements** (Opus) → Define data processing needs, calculations, and business rules
+2. **learn-spreadsheet** (Sonnet) → Analyze existing data sources and current spreadsheet processes
+3. **build-spreadsheet** (Sonnet) → Create robust spreadsheet models with formulas and validation
+4. **build-code** (Sonnet) → Implement automation scripts, macros, or external integrations
+5. **check-tests** (Haiku) → Validate calculations, edge cases, and data integrity
+6. **learn-docs** (Sonnet) → Create user guides and maintenance documentation
+
+### Business Reporting & Analytics Workflow
+1. **learn-spreadsheet** (Sonnet) → Analyze current data sources and reporting requirements
+2. **plan-requirements** (Opus) → Define comprehensive reporting and analytics requirements
+3. **build-spreadsheet** (Sonnet) → Create data processing and calculation engines
+4. **build-slides** (Sonnet) → Design executive dashboards and presentation templates
+5. **build-code** (Sonnet) → Implement automated data pipelines and report generation
+6. **check-tests** (Haiku) → Validate data accuracy and report consistency
+7. **learn-docs** (Sonnet) → Document reporting processes and maintenance procedures
