@@ -58,7 +58,7 @@ Agents are organized by color according to their role in the software developmen
 - Follows progressive disclosure principles for complex CLIs
 - **Reads from**: plan-requirements, plan-api
 - **Creates**: `.agent-handoffs/build-cli-<uuid>.md` with CLI specifications
-- **Hands off to**: build-code, learn-docs
+- **Hands off to**: build-code, write-docs
 
 #### **build-gui** (Sonnet)
 **When to use**: Design modern graphical user interfaces with cross-platform compatibility and accessibility
@@ -69,7 +69,7 @@ Agents are organized by color according to their role in the software developmen
 - Creates comprehensive UI specifications and design systems
 - **Reads from**: plan-requirements, plan-api
 - **Creates**: `.agent-handoffs/build-gui-<uuid>.md` with GUI specifications
-- **Hands off to**: build-code, check-tests, learn-docs
+- **Hands off to**: build-code, check-tests, write-docs
 
 #### **build-code** (Sonnet)
 **When to use**: Transform requirements into clean, maintainable, production-ready code
@@ -90,7 +90,7 @@ Agents are organized by color according to their role in the software developmen
 - Ensures reliable hardware-software integration patterns
 - **Reads from**: plan-requirements, plan-api handoffs
 - **Creates**: `.agent-handoffs/build-hardware-<uuid>.md` with hardware specifications
-- **Hands off to**: build-code, check-tests, learn-docs
+- **Hands off to**: build-code, check-tests, write-docs
 
 #### **build-slides** (Sonnet)
 **When to use**: Design and create professional presentations with compelling visual storytelling and accessibility
@@ -101,7 +101,18 @@ Agents are organized by color according to their role in the software developmen
 - Optimizes presentations for different delivery contexts (in-person, virtual, self-guided)
 - **Reads from**: plan-requirements, learn-slides handoffs
 - **Creates**: `.agent-handoffs/build-slides-<uuid>.md` with presentation specifications
-- **Hands off to**: build-code (for interactive elements), learn-docs, check-ui
+- **Hands off to**: build-code (for interactive elements), write-docs, check-ui
+
+#### **build-documents** (Sonnet)
+**When to use**: Create professional documents including Word (.docx), OpenDocument (.odt), and PDF files with sophisticated formatting
+- Designs document templates and style systems for consistent branding
+- Creates complex documents with advanced formatting, tables, and interactive features
+- Implements forms, automation pipelines, and document generation workflows
+- Builds template libraries and cross-format compatibility systems
+- Ensures accessibility compliance and professional quality output
+- **Reads from**: plan-requirements, learn-documents handoffs
+- **Creates**: `.agent-handoffs/build-documents-<uuid>.md` with document specifications
+- **Hands off to**: build-code (for automation), check-tests, write-docs
 
 #### **build-spreadsheet** (Sonnet)
 **When to use**: Create powerful, maintainable spreadsheets with robust formulas, data models, and automation
@@ -112,7 +123,7 @@ Agents are organized by color according to their role in the software developmen
 - Ensures data integrity, validation, and error handling
 - **Reads from**: plan-requirements, learn-spreadsheet handoffs
 - **Creates**: `.agent-handoffs/build-spreadsheet-<uuid>.md` with spreadsheet specifications
-- **Hands off to**: build-code (for integrations), check-tests, learn-docs
+- **Hands off to**: build-code (for integrations), check-tests, write-docs
 
 ### 🔵 Knowledge & Documentation
 
@@ -125,9 +136,9 @@ Agents are organized by color according to their role in the software developmen
 - Discovers entry points, configuration files, and build systems
 - **Exploration strategy**: Structure → Patterns → Dependencies → Entry Points → Technology Detection
 - **Output**: Project overview, module inventory, architecture patterns, technology stack summary
-- **Hands off to**: plan-requirements (system context), build-code (conventions), learn-docs (architecture)
+- **Hands off to**: plan-requirements (system context), build-code (conventions), write-docs (architecture)
 
-#### **learn-docs** (Sonnet)
+#### **write-docs** (Sonnet)
 **When to use**: Creates comprehensive project documentation and user-facing guides that make code accessible
 - Generates user-facing documentation, README files, and setup guides
 - Creates API documentation from code specifications with practical examples
@@ -150,6 +161,17 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Search summary, historical findings with evolution notes, and commit references
 - **Hands off to**: Any agent needing historical context or code recovery
 
+#### **learn-documents** (Haiku)
+**When to use**: Analyze, extract content from, or understand document files (.docx, .doc, .odt, .pdf)
+- Parses and analyzes documents using appropriate libraries (python-docx, odfpy, PyPDF2/pdfplumber)
+- Extracts text, images, tables, forms, and metadata from documents
+- Identifies document structure, formatting patterns, and organizational hierarchy
+- Processes interactive forms, fillable PDFs, and complex layouts with OCR support
+- Detects document quality issues, accessibility problems, and formatting inconsistencies
+- **Analysis methodology**: Assess → Structure → Content → Format → Report
+- **Output**: Document structure summary, content extraction, formatting patterns, accessibility assessment
+- **Hands off to**: plan-requirements (document context), build-documents (template creation), write-docs (content documentation)
+
 #### **learn-slides** (Haiku)
 **When to use**: Analyze, understand, or extract information from presentation files (.pptx, .odp, .key, .pdf presentations)
 - Parses and analyzes presentations using appropriate libraries (python-pptx, odfpy, PyPDF2)
@@ -159,7 +181,7 @@ Agents are organized by color according to their role in the software developmen
 - Categorizes slide types and assesses design consistency
 - **Analysis methodology**: Assess → Structure → Content → Design → Report
 - **Output**: Presentation structure summary, content extraction, design patterns identified
-- **Hands off to**: plan-requirements (presentation context), build-slides (template creation), learn-docs (presentation documentation)
+- **Hands off to**: plan-requirements (presentation context), build-slides (template creation), write-docs (presentation documentation)
 
 #### **learn-spreadsheet** (Sonnet)
 **When to use**: Analyze, summarize, extract data from, or identify issues in spreadsheet files (.xlsx, .xlsm, .csv, .ods)
@@ -170,7 +192,7 @@ Agents are organized by color according to their role in the software developmen
 - Handles edge cases: corrupted files, massive datasets, encrypted content, non-standard formats
 - **Analysis methodology**: Assess → Structure → Quality → Report
 - **Output**: Data structure summary, quality issues found, extraction tools created
-- **Hands off to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
+- **Hands off to**: plan-requirements (data context), build-code (data integration), write-docs (data documentation)
 
 ### 🟡 Quality Assurance
 
@@ -206,7 +228,7 @@ Agents are organized by color according to their role in the software developmen
 - Measures UI performance and animation smoothness
 - **Reads from**: build-gui, build-code handoffs
 - **Creates**: `.agent-handoffs/check-ui-<uuid>.md` with UI test results
-- **Hands off to**: build-code (for fixes), learn-docs (for test documentation)
+- **Hands off to**: build-code (for fixes), write-docs (for test documentation)
 
 ### 🟠 Operations & Monitoring
 
@@ -307,14 +329,14 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 5. **check-tests** (Haiku) → Create comprehensive test suite with good coverage
 6. **check-quality** (Sonnet) → Quality assessment and refactoring recommendations
 7. **fix-security** (Sonnet) → Security vulnerability assessment (for security-sensitive features)
-8. **learn-docs** (Sonnet) → Create user-facing documentation and API docs
+8. **write-docs** (Sonnet) → Create user-facing documentation and API docs
 
 ### CLI Tool Development
 1. **plan-requirements** (Opus) → Define CLI tool requirements and user workflows
 2. **build-cli** (Sonnet) → Design command structure, arguments, and user interaction patterns
 3. **build-code** (Sonnet) → Build the CLI application following design specifications
 4. **check-tests** (Haiku) → Create CLI integration and command tests
-5. **learn-docs** (Sonnet) → Generate user guides and man pages
+5. **write-docs** (Sonnet) → Generate user guides and man pages
 
 ### GUI Application Development
 1. **plan-requirements** (Opus) → Define UI requirements and user stories
@@ -322,14 +344,14 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **build-code** (Sonnet) → Build UI components and application logic
 4. **check-ui** (Haiku) → Execute visual regression testing and accessibility validation
 5. **check-tests** (Haiku) → Create comprehensive test coverage for functionality
-6. **learn-docs** (Sonnet) → Create user guides and component documentation
+6. **write-docs** (Sonnet) → Create user guides and component documentation
 
 ### Hardware Integration Development
 1. **plan-requirements** (Opus) → Define hardware interface requirements and constraints
 2. **build-hardware** (Sonnet) → Design communication protocols and hardware abstraction layers
 3. **build-code** (Sonnet) → Implement device drivers and hardware interfaces
 4. **check-tests** (Haiku) → Create hardware simulation tests and integration validation
-5. **learn-docs** (Sonnet) → Document hardware setup and troubleshooting procedures
+5. **write-docs** (Sonnet) → Document hardware setup and troubleshooting procedures
 
 ### Bug Investigation & Fix
 1. **fix-runtime** (Opus) → Systematic analysis of runtime issue with root cause identification
@@ -349,7 +371,7 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 2. **learn-commits** (Haiku) → Search for historical implementations and evolution patterns
 3. **check-quality** (Sonnet) → Assess current code quality and identify improvement opportunities
 4. **fix-security** (Sonnet) → Check for security vulnerabilities in legacy code
-5. **learn-docs** (Sonnet) → Document findings and create improvement roadmap
+5. **write-docs** (Sonnet) → Document findings and create improvement roadmap
 
 ### Unfamiliar Codebase Integration
 1. **learn-codebase** (Haiku) → Rapidly map project structure, modules, and architectural patterns
@@ -371,7 +393,7 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **build-slides** (Sonnet) → Design presentation structure, templates, and visual hierarchy
 4. **build-code** (Sonnet) → Generate dynamic content, data visualizations, or interactive elements
 5. **check-ui** (Haiku) → Validate accessibility and cross-platform compatibility
-6. **learn-docs** (Sonnet) → Document presentation templates and usage guidelines
+6. **write-docs** (Sonnet) → Document presentation templates and usage guidelines
 
 ### Spreadsheet Development & Automation
 1. **plan-requirements** (Opus) → Define data processing needs, calculations, and business rules
@@ -379,7 +401,7 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **build-spreadsheet** (Sonnet) → Create robust spreadsheet models with formulas and validation
 4. **build-code** (Sonnet) → Implement automation scripts, macros, or external integrations
 5. **check-tests** (Haiku) → Validate calculations, edge cases, and data integrity
-6. **learn-docs** (Sonnet) → Create user guides and maintenance documentation
+6. **write-docs** (Sonnet) → Create user guides and maintenance documentation
 
 ### Business Reporting & Analytics Workflow
 1. **learn-spreadsheet** (Sonnet) → Analyze current data sources and reporting requirements
@@ -388,4 +410,23 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 4. **build-slides** (Sonnet) → Design executive dashboards and presentation templates
 5. **build-code** (Sonnet) → Implement automated data pipelines and report generation
 6. **check-tests** (Haiku) → Validate data accuracy and report consistency
-7. **learn-docs** (Sonnet) → Document reporting processes and maintenance procedures
+7. **write-docs** (Sonnet) → Document reporting processes and maintenance procedures
+
+### Document Processing & Automation
+1. **learn-documents** (Haiku) → Analyze existing forms, contracts, or document templates
+2. **plan-requirements** (Opus) → Define document automation and generation requirements
+3. **build-documents** (Sonnet) → Create document templates, forms, and generation systems
+4. **build-code** (Sonnet) → Implement document automation pipelines and data integration
+5. **check-tests** (Haiku) → Validate document generation, forms, and data processing
+6. **write-docs** (Sonnet) → Document template usage and maintenance procedures
+
+### Complete Office Suite Integration
+1. **learn-documents** (Haiku) → Extract data and requirements from existing Word/PDF documents
+2. **learn-spreadsheet** (Sonnet) → Analyze data processing needs from extracted information
+3. **plan-requirements** (Opus) → Define comprehensive office automation workflow
+4. **build-spreadsheet** (Sonnet) → Create data processing and calculation models
+5. **build-documents** (Sonnet) → Generate professional reports and documentation
+6. **build-slides** (Sonnet) → Create presentation templates from document content
+7. **build-code** (Sonnet) → Implement end-to-end office automation system
+8. **check-tests** (Haiku) → Validate entire workflow from data input to document output
+9. **write-docs** (Sonnet) → Document complete office automation system

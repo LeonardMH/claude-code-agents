@@ -27,35 +27,41 @@ Examples:
 ### build-cli
 - **Reads**: plan-requirements, plan-api handoffs
 - **Creates**: CLI design specifications
-- **Handoff to**: build-code, learn-docs
+- **Handoff to**: build-code, write-docs
 - **File includes**: Command structure, argument schemas, config formats, help templates
 
 ### build-gui
 - **Reads**: plan-requirements, plan-api handoffs
 - **Creates**: GUI architecture specifications and design systems
-- **Handoff to**: build-code, check-tests, learn-docs
+- **Handoff to**: build-code, check-tests, write-docs
 - **File includes**: Component hierarchy, state management patterns, accessibility guidelines, responsive design strategies, framework recommendations
 
 ### build-hardware
 - **Reads**: plan-requirements, plan-api handoffs
 - **Creates**: Hardware interface specifications and communication protocols
-- **Handoff to**: build-code, check-tests, learn-docs
+- **Handoff to**: build-code, check-tests, write-docs
 - **File includes**: Protocol definitions, driver APIs, hardware abstraction interfaces, testing strategies
+
+### build-documents
+- **Reads**: plan-requirements, learn-documents handoffs
+- **Creates**: Document architecture specifications and template systems
+- **Handoff to**: build-code (for automation), check-tests, write-docs
+- **File includes**: Document structure, style system design, template specifications, form requirements, accessibility guidelines, cross-format compatibility
 
 ### build-slides
 - **Reads**: plan-requirements, learn-slides handoffs
 - **Creates**: Presentation design specifications and template systems
-- **Handoff to**: build-code (for interactive elements), learn-docs, check-ui
+- **Handoff to**: build-code (for interactive elements), write-docs, check-ui
 - **File includes**: Slide structure, visual design system, template specifications, data visualization requirements, accessibility guidelines
 
 ### build-spreadsheet
 - **Reads**: plan-requirements, learn-spreadsheet handoffs
 - **Creates**: Spreadsheet architecture specifications and formula documentation
-- **Handoff to**: build-code (for integrations), check-tests, learn-docs
+- **Handoff to**: build-code (for integrations), check-tests, write-docs
 - **File includes**: Workbook structure, data model design, formula documentation, validation rules, automation specifications
 
 ### build-code
-- **Reads**: plan-requirements, plan-api, build-cli, build-gui, build-hardware, build-slides, build-spreadsheet handoffs
+- **Reads**: plan-requirements, plan-api, build-cli, build-gui, build-hardware, build-documents, build-slides, build-spreadsheet handoffs
 - **Creates**: Implementation code and documentation
 - **Handoff to**: check-quality, fix-build
 - **File includes**: Architecture decisions, key components, testing needs
@@ -78,7 +84,7 @@ Examples:
 
 ### learn-codebase
 - **Creates**: Codebase structural analysis and architectural overview
-- **Handoff to**: plan-requirements (system context), build-code (conventions), learn-docs (architecture)
+- **Handoff to**: plan-requirements (system context), build-code (conventions), write-docs (architecture)
 - **File includes**: Project structure overview, module inventory, technology stack, architectural patterns, key APIs
 
 ### learn-commits
@@ -95,7 +101,7 @@ Examples:
 ### check-ui
 - **Reads**: build-gui, build-code handoffs
 - **Creates**: UI test results and visual regression reports
-- **Handoff to**: build-code (for fixes), learn-docs (for test documentation)
+- **Handoff to**: build-code (for fixes), write-docs (for test documentation)
 - **File includes**: Visual difference reports, accessibility audit findings, cross-browser compatibility results, UI performance metrics
 
 ### fix-security
@@ -109,20 +115,25 @@ Examples:
 - **Handoff to**: build-code (for optimizations)
 - **File includes**: Performance metrics, bottleneck analysis, optimization strategies
 
-### learn-docs
+### write-docs
 - **Reads**: All agent handoffs for comprehensive project context
 - **Creates**: Documentation summaries and maintenance guides
 - **Handoff to**: Final documentation deliverables
 - **File includes**: Documentation structure, key content areas, maintenance recommendations
 
+### learn-documents
+- **Creates**: Document analysis and content extraction results
+- **Handoff to**: plan-requirements (document context), build-documents (template creation), write-docs (content documentation)
+- **File includes**: Document structure summary, content extraction, formatting patterns, accessibility assessment, form field analysis
+
 ### learn-slides
 - **Creates**: Presentation analysis and content extraction results
-- **Handoff to**: plan-requirements (presentation context), build-slides (template creation), learn-docs (presentation documentation)
+- **Handoff to**: plan-requirements (presentation context), build-slides (template creation), write-docs (presentation documentation)
 - **File includes**: Presentation structure summary, content extraction, design patterns identified, branding elements found
 
 ### learn-spreadsheet
 - **Creates**: Spreadsheet analysis and data extraction results
-- **Handoff to**: plan-requirements (data context), build-code (data integration), learn-docs (data documentation)
+- **Handoff to**: plan-requirements (data context), build-code (data integration), write-docs (data documentation)
 - **File includes**: Data structure summary, quality issues found, extraction tools created, recommendations for data handling
 
 ## Handoff File Structure
