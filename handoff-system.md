@@ -36,8 +36,14 @@ Examples:
 - **Handoff to**: build-code, check-tests, learn-docs
 - **File includes**: Component hierarchy, state management patterns, accessibility guidelines, responsive design strategies, framework recommendations
 
+### build-hardware
+- **Reads**: plan-requirements, plan-api handoffs
+- **Creates**: Hardware interface specifications and communication protocols
+- **Handoff to**: build-code, check-tests, learn-docs
+- **File includes**: Protocol definitions, driver APIs, hardware abstraction interfaces, testing strategies
+
 ### build-code
-- **Reads**: plan-requirements, plan-api, build-cli, build-gui handoffs
+- **Reads**: plan-requirements, plan-api, build-cli, build-gui, build-hardware handoffs
 - **Creates**: Implementation code and documentation
 - **Handoff to**: check-quality, fix-build
 - **File includes**: Architecture decisions, key components, testing needs

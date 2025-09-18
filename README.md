@@ -81,6 +81,17 @@ Agents are organized by color according to their role in the software developmen
 - **Reads from**: plan-requirements, plan-api handoffs
 - **Hands off to**: check-quality, fix-build
 
+#### **build-hardware** (Sonnet)
+**When to use**: Design hardware interfaces and communication protocols for embedded systems and IoT devices
+- Designs hardware communication protocols and device drivers
+- Creates hardware abstraction layers for cross-platform compatibility
+- Interfaces with sensors, actuators, and embedded systems
+- Handles real-time data acquisition and control systems
+- Ensures reliable hardware-software integration patterns
+- **Reads from**: plan-requirements, plan-api handoffs
+- **Creates**: `.agent-handoffs/build-hardware-<uuid>.md` with hardware specifications
+- **Hands off to**: build-code, check-tests, learn-docs
+
 ### 🔵 Knowledge & Documentation
 
 #### **learn-codebase** (Haiku)
@@ -267,6 +278,13 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 3. **build-code** (Sonnet) → Build UI components and application logic
 4. **check-tests** (Haiku) → Create GUI tests and validate accessibility
 5. **learn-docs** (Sonnet) → Create user guides and component documentation
+
+### Hardware Integration Development
+1. **plan-requirements** (Opus) → Define hardware interface requirements and constraints
+2. **build-hardware** (Sonnet) → Design communication protocols and hardware abstraction layers
+3. **build-code** (Sonnet) → Implement device drivers and hardware interfaces
+4. **check-tests** (Haiku) → Create hardware simulation tests and integration validation
+5. **learn-docs** (Sonnet) → Document hardware setup and troubleshooting procedures
 
 ### Bug Investigation & Fix
 1. **fix-runtime** (Opus) → Systematic analysis of runtime issue with root cause identification
