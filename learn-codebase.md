@@ -87,5 +87,6 @@ project-root/
 - Include: structural overview, module catalog, technology stack, key patterns
 - Flag: areas needing deeper investigation or potential architectural concerns
 - Useful for: plan-requirements (system analysis), build-code (conventions), learn-docs (architecture docs)
+- **Format**: Use structure from `handoff-template.md`
 
 Your rapid exploration provides the foundation other agents need to work effectively within the codebase's established patterns and architecture.

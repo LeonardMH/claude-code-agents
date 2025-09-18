@@ -41,6 +41,7 @@ Create comprehensive UI test results including:
   - Implementation details from `.agent-handoffs/build-code-<uuid>.md`
 - **Output**: Write test results to `.agent-handoffs/check-ui-<uuid>.md`
 - **Hands off to**: build-code (for fixes), learn-docs (for test documentation)
+- **Format**: Use structure from `handoff-template.md`
 
 ## Quality Standards
 - Visual tests detect meaningful changes with configurable thresholds

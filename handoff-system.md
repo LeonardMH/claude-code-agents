@@ -110,32 +110,11 @@ Examples:
 
 ## Handoff File Structure
 
-Each handoff file should contain:
-
-```markdown
-# Agent Handoff: [Agent Name]
-Generated: [timestamp]
-Task: [brief description]
-
-## Summary
-[Brief overview of work completed]
-
-## Key Findings
-[Important discoveries or results]
-
-## Context for Next Agent
-[What the next agent needs to know]
-
-## Recommendations
-[Specific actions or considerations]
-
-## Files/Components Affected
-[Relevant code locations or artifacts]
-```
+See `handoff-template.md` for the complete structure template and formatting guidelines.
 
 ## Usage Guidelines
 - Always check for relevant handoffs before starting work
 - Create handoff files after completing significant analysis or implementation
-- Use descriptive UUIDs or short identifiers for easy reference
+- Use the structure defined in `handoff-template.md` for consistency
 - Keep handoffs concise but comprehensive
 - Reference specific files:line_numbers when applicable

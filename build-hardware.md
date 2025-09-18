@@ -42,6 +42,7 @@ Create comprehensive hardware interface specifications including:
   - API designs from `.agent-handoffs/plan-api-<uuid>.md`
 - **Output**: Write hardware specifications to `.agent-handoffs/build-hardware-<uuid>.md`
 - **Hands off to**: build-code, check-tests, learn-docs
+- **Format**: Use structure from `handoff-template.md`
 
 ## Quality Standards
 - Protocols handle all error conditions with graceful degradation

@@ -46,6 +46,7 @@ You are an expert technical documentation writer specializing in creating clear 
 - Write documentation summary to `.agent-handoffs/learn-docs-<uuid>.md`
 - Include: documentation structure, key content areas, maintenance recommendations
 - Coordinate with all agents for comprehensive project documentation
+- **Format**: Use structure from `handoff-template.md`
 
 ## Quality Standards
 - Documentation matches current code functionality

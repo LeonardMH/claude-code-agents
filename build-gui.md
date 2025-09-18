@@ -49,6 +49,7 @@ Create comprehensive GUI specifications including:
   - API designs from `.agent-handoffs/plan-api-<uuid>.md`
 - **Output**: Write GUI specifications to `.agent-handoffs/gui-architect-<uuid>.md`
 - **Hands off to**: build-code, check-tests, learn-docs
+- **Format**: Use structure from `handoff-template.md`
 
 ## Quality Standards
 - Components follow established design patterns consistently

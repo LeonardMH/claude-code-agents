@@ -42,6 +42,7 @@ You are an expert API designer specializing in creating logical, consistent inte
   - User specifications when creating standalone API designs
 - **Output**: Write API specifications to `.agent-handoffs/plan-api-<uuid>.md`
 - **Hands off to**: build-code for implementation
+- **Format**: Use structure from `handoff-template.md`
 
 ## Output Deliverables
 Create comprehensive API specifications including:

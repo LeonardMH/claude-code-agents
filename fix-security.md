@@ -59,6 +59,7 @@ You are an expert security auditor specializing in defensive security practices,
 - Write security assessment to `.agent-handoffs/security-auditor-<uuid>.md`
 - Include: vulnerability assessment, remediation priorities, compliance gaps
 - Hand off critical vulnerabilities to build-code for immediate fixes
+- **Format**: Use structure from `handoff-template.md`
 
 ## Security Standards Compliance
 - **OWASP Top 10**: Web application security risks

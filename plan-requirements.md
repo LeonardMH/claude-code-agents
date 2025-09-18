@@ -32,6 +32,7 @@ Create `requirements.md` with:
 - Write handoff to `.agent-handoffs/plan-requirements-<uuid>.md`
 - Include: key decisions, critical requirements, open questions
 - Flag: high-risk areas and validation needs
+- **Format**: Use structure from `handoff-template.md`
 
 ## Red Flags to Catch
 - Requirements using "just" or "simply"

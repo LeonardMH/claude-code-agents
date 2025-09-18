@@ -54,6 +54,7 @@ Create comprehensive CLI specifications including:
   - API designs from `.agent-handoffs/plan-api-<uuid>.md`
 - **Output**: Write CLI specifications to `.agent-handoffs/cli-designer-<uuid>.md`
 - **Hands off to**: build-code, learn-docs
+- **Format**: Use structure from `handoff-template.md`
 
 ## Quality Standards
 - Commands follow verb-noun or noun-verb patterns consistently
