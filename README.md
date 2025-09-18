@@ -164,6 +164,17 @@ Agents are organized by color according to their role in the software developmen
 - **Output**: Test summary, failed test details, coverage gaps, and performance metrics
 - **Hands off to**: fix-runtime (for test failures)
 
+#### **check-ui** (Haiku)
+**When to use**: Automated GUI testing with visual regression, accessibility validation, and user experience testing
+- Executes visual regression testing and screenshot comparison
+- Validates accessibility compliance and keyboard navigation
+- Tests user interaction flows and UI responsiveness
+- Verifies cross-browser and cross-platform compatibility
+- Measures UI performance and animation smoothness
+- **Reads from**: build-gui, build-code handoffs
+- **Creates**: `.agent-handoffs/check-ui-<uuid>.md` with UI test results
+- **Hands off to**: build-code (for fixes), learn-docs (for test documentation)
+
 ### 🟠 Operations & Monitoring
 
 #### **profile-performance** (Sonnet)
@@ -276,8 +287,9 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 1. **plan-requirements** (Opus) → Define UI requirements and user stories
 2. **build-gui** (Sonnet) → Design component architecture, state management, and accessibility patterns
 3. **build-code** (Sonnet) → Build UI components and application logic
-4. **check-tests** (Haiku) → Create GUI tests and validate accessibility
-5. **learn-docs** (Sonnet) → Create user guides and component documentation
+4. **check-ui** (Haiku) → Execute visual regression testing and accessibility validation
+5. **check-tests** (Haiku) → Create comprehensive test coverage for functionality
+6. **learn-docs** (Sonnet) → Create user guides and component documentation
 
 ### Hardware Integration Development
 1. **plan-requirements** (Opus) → Define hardware interface requirements and constraints

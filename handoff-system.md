@@ -80,6 +80,12 @@ Examples:
 - **Handoff to**: fix-runtime (for test failures)
 - **File includes**: Test coverage analysis, failing test details, testing strategy
 
+### check-ui
+- **Reads**: build-gui, build-code handoffs
+- **Creates**: UI test results and visual regression reports
+- **Handoff to**: build-code (for fixes), learn-docs (for test documentation)
+- **File includes**: Visual difference reports, accessibility audit findings, cross-browser compatibility results, UI performance metrics
+
 ### fix-security
 - **Reads**: build-code handoffs
 - **Creates**: Security vulnerability assessments and compliance reports
