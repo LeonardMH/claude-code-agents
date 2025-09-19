@@ -20,7 +20,7 @@ Agents are organized by color according to their role in the software developmen
 | 🔵 Blue | Knowledge & Documentation | Sonnet, Haiku |
 | 🟡 Yellow | Quality Assurance | Sonnet, Haiku |
 | 🟠 Orange | Operations & Monitoring | Sonnet |
-| 🔴 Red | Incident Response | Opus, Haiku, Sonnet |
+| 🔴 Red | Incident Response | Haiku, Sonnet |
 
 ## Available Agents
 
@@ -246,7 +246,7 @@ Agents are organized by color according to their role in the software developmen
 
 ### 🔴 Incident Response
 
-#### **fix-runtime** (Opus)
+#### **fix-runtime** (Sonnet)
 **When to use**: Investigate runtime bugs, crashes, and production issues with systematic analysis
 - Analyzes runtime exceptions, stack traces, and crash dumps
 - Investigates performance issues, memory leaks, and resource problems

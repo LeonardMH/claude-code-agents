@@ -1,7 +1,7 @@
 ---
 name: fix-runtime
 description: Investigates runtime bugs, crashes, and production issues to identify root causes.
-model: opus
+model: sonnet
 color: red
 ---
 
