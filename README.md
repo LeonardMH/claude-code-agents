@@ -322,111 +322,111 @@ After installation, your `~/.claude/agents/` directory will contain all agent `.
 ## Workflow Examples
 
 ### New Feature Development
-1. **plan-requirements** (Opus) → Transform vague request into clear requirements with acceptance criteria
-2. **plan-api** (Opus) → Design consistent interfaces and data models (if needed)
-3. **build-code** (Sonnet) → Build clean, maintainable implementation following best practices
-4. **fix-build** (Haiku) → Ensure code compiles and builds successfully
-5. **check-tests** (Haiku) → Create comprehensive test suite with good coverage
-6. **check-quality** (Sonnet) → Quality assessment and refactoring recommendations
-7. **fix-security** (Sonnet) → Security vulnerability assessment (for security-sensitive features)
-8. **write-docs** (Sonnet) → Create user-facing documentation and API docs
+1. **plan-requirements** → Transform vague request into clear requirements with acceptance criteria
+2. **plan-api** → Design consistent interfaces and data models (if needed)
+3. **build-code** → Build clean, maintainable implementation following best practices
+4. **fix-build** → Ensure code compiles and builds successfully
+5. **check-tests** → Create comprehensive test suite with good coverage
+6. **check-quality** → Quality assessment and refactoring recommendations
+7. **fix-security** → Security vulnerability assessment (for security-sensitive features)
+8. **write-docs** → Create user-facing documentation and API docs
 
 ### CLI Tool Development
-1. **plan-requirements** (Opus) → Define CLI tool requirements and user workflows
-2. **build-cli** (Sonnet) → Design command structure, arguments, and user interaction patterns
-3. **build-code** (Sonnet) → Build the CLI application following design specifications
-4. **check-tests** (Haiku) → Create CLI integration and command tests
-5. **write-docs** (Sonnet) → Generate user guides and man pages
+1. **plan-requirements** → Define CLI tool requirements and user workflows
+2. **build-cli** → Design command structure, arguments, and user interaction patterns
+3. **build-code** → Build the CLI application following design specifications
+4. **check-tests** → Create CLI integration and command tests
+5. **write-docs** → Generate user guides and man pages
 
 ### GUI Application Development
-1. **plan-requirements** (Opus) → Define UI requirements and user stories
-2. **build-gui** (Sonnet) → Design component architecture, state management, and accessibility patterns
-3. **build-code** (Sonnet) → Build UI components and application logic
-4. **check-ui** (Haiku) → Execute visual regression testing and accessibility validation
-5. **check-tests** (Haiku) → Create comprehensive test coverage for functionality
-6. **write-docs** (Sonnet) → Create user guides and component documentation
+1. **plan-requirements** → Define UI requirements and user stories
+2. **build-gui** → Design component architecture, state management, and accessibility patterns
+3. **build-code** → Build UI components and application logic
+4. **check-ui** → Execute visual regression testing and accessibility validation
+5. **check-tests** → Create comprehensive test coverage for functionality
+6. **write-docs** → Create user guides and component documentation
 
 ### Hardware Integration Development
-1. **plan-requirements** (Opus) → Define hardware interface requirements and constraints
-2. **build-hardware** (Sonnet) → Design communication protocols and hardware abstraction layers
-3. **build-code** (Sonnet) → Implement device drivers and hardware interfaces
-4. **check-tests** (Haiku) → Create hardware simulation tests and integration validation
-5. **write-docs** (Sonnet) → Document hardware setup and troubleshooting procedures
+1. **plan-requirements** → Define hardware interface requirements and constraints
+2. **build-hardware** → Design communication protocols and hardware abstraction layers
+3. **build-code** → Implement device drivers and hardware interfaces
+4. **check-tests** → Create hardware simulation tests and integration validation
+5. **write-docs** → Document hardware setup and troubleshooting procedures
 
 ### Bug Investigation & Fix
-1. **fix-runtime** (Opus) → Systematic analysis of runtime issue with root cause identification
-2. **learn-commits** (Haiku) → Find historical context or previous implementations (if needed)
-3. **build-code** (Sonnet) → Implement targeted fix based on root cause analysis
-4. **check-tests** (Haiku) → Add regression tests to prevent future occurrences
-5. **check-quality** (Sonnet) → Review fix for quality and unintended side effects
+1. **fix-runtime** → Systematic analysis of runtime issue with root cause identification
+2. **learn-commits** → Find historical context or previous implementations (if needed)
+3. **build-code** → Implement targeted fix based on root cause analysis
+4. **check-tests** → Add regression tests to prevent future occurrences
+5. **check-quality** → Review fix for quality and unintended side effects
 
 ### Performance Optimization
-1. **profile-performance** (Sonnet) → Identify bottlenecks using appropriate profiling tools
-2. **build-code** (Sonnet) → Implement optimizations based on profiling results
-3. **check-tests** (Haiku) → Validate performance improvements and ensure functionality
-4. **check-quality** (Sonnet) → Review optimized code for maintainability
+1. **profile-performance** → Identify bottlenecks using appropriate profiling tools
+2. **build-code** → Implement optimizations based on profiling results
+3. **check-tests** → Validate performance improvements and ensure functionality
+4. **check-quality** → Review optimized code for maintainability
 
 ### Legacy Code Analysis
-1. **learn-codebase** (Haiku) → Map current codebase structure and identify key architectural patterns
-2. **learn-commits** (Haiku) → Search for historical implementations and evolution patterns
-3. **check-quality** (Sonnet) → Assess current code quality and identify improvement opportunities
-4. **fix-security** (Sonnet) → Check for security vulnerabilities in legacy code
-5. **write-docs** (Sonnet) → Document findings and create improvement roadmap
+1. **learn-codebase** → Map current codebase structure and identify key architectural patterns
+2. **learn-commits** → Search for historical implementations and evolution patterns
+3. **check-quality** → Assess current code quality and identify improvement opportunities
+4. **fix-security** → Check for security vulnerabilities in legacy code
+5. **write-docs** → Document findings and create improvement roadmap
 
 ### Unfamiliar Codebase Integration
-1. **learn-codebase** (Haiku) → Rapidly map project structure, modules, and architectural patterns
-2. **plan-requirements** (Opus) → Analyze how new requirements fit within existing architecture
-3. **plan-api** (Opus) → Design interfaces that align with existing patterns (if needed)
-4. **build-code** (Sonnet) → Implement following discovered conventions and patterns
-5. **check-tests** (Haiku) → Create tests using existing testing frameworks and patterns
+1. **learn-codebase** → Rapidly map project structure, modules, and architectural patterns
+2. **plan-requirements** → Analyze how new requirements fit within existing architecture
+3. **plan-api** → Design interfaces that align with existing patterns (if needed)
+4. **build-code** → Implement following discovered conventions and patterns
+5. **check-tests** → Create tests using existing testing frameworks and patterns
 
 ### Data Analysis & Integration
-1. **learn-spreadsheet** (Sonnet) → Analyze data structure, quality issues, and extract insights from spreadsheet files
-2. **plan-requirements** (Opus) → Transform data insights into feature requirements
-3. **plan-api** (Opus) → Design data models and interfaces for spreadsheet integration
-4. **build-code** (Sonnet) → Build data processing and integration features
-5. **check-tests** (Haiku) → Validate data processing accuracy and edge cases
+1. **learn-spreadsheet** → Analyze data structure, quality issues, and extract insights from spreadsheet files
+2. **plan-requirements** → Transform data insights into feature requirements
+3. **plan-api** → Design data models and interfaces for spreadsheet integration
+4. **build-code** → Build data processing and integration features
+5. **check-tests** → Validate data processing accuracy and edge cases
 
 ### Presentation Creation & Automation
-1. **plan-requirements** (Opus) → Define presentation objectives, audience, and content requirements
-2. **learn-slides** (Haiku) → Analyze existing templates, brand guidelines, or reference presentations
-3. **build-slides** (Sonnet) → Design presentation structure, templates, and visual hierarchy
-4. **build-code** (Sonnet) → Generate dynamic content, data visualizations, or interactive elements
-5. **check-ui** (Haiku) → Validate accessibility and cross-platform compatibility
-6. **write-docs** (Sonnet) → Document presentation templates and usage guidelines
+1. **plan-requirements** → Define presentation objectives, audience, and content requirements
+2. **learn-slides** → Analyze existing templates, brand guidelines, or reference presentations
+3. **build-slides** → Design presentation structure, templates, and visual hierarchy
+4. **build-code** → Generate dynamic content, data visualizations, or interactive elements
+5. **check-ui** → Validate accessibility and cross-platform compatibility
+6. **write-docs** → Document presentation templates and usage guidelines
 
 ### Spreadsheet Development & Automation
-1. **plan-requirements** (Opus) → Define data processing needs, calculations, and business rules
-2. **learn-spreadsheet** (Sonnet) → Analyze existing data sources and current spreadsheet processes
-3. **build-spreadsheet** (Sonnet) → Create robust spreadsheet models with formulas and validation
-4. **build-code** (Sonnet) → Implement automation scripts, macros, or external integrations
-5. **check-tests** (Haiku) → Validate calculations, edge cases, and data integrity
-6. **write-docs** (Sonnet) → Create user guides and maintenance documentation
+1. **plan-requirements** → Define data processing needs, calculations, and business rules
+2. **learn-spreadsheet** → Analyze existing data sources and current spreadsheet processes
+3. **build-spreadsheet** → Create robust spreadsheet models with formulas and validation
+4. **build-code** → Implement automation scripts, macros, or external integrations
+5. **check-tests** → Validate calculations, edge cases, and data integrity
+6. **write-docs** → Create user guides and maintenance documentation
 
 ### Business Reporting & Analytics Workflow
-1. **learn-spreadsheet** (Sonnet) → Analyze current data sources and reporting requirements
-2. **plan-requirements** (Opus) → Define comprehensive reporting and analytics requirements
-3. **build-spreadsheet** (Sonnet) → Create data processing and calculation engines
-4. **build-slides** (Sonnet) → Design executive dashboards and presentation templates
-5. **build-code** (Sonnet) → Implement automated data pipelines and report generation
-6. **check-tests** (Haiku) → Validate data accuracy and report consistency
-7. **write-docs** (Sonnet) → Document reporting processes and maintenance procedures
+1. **learn-spreadsheet** → Analyze current data sources and reporting requirements
+2. **plan-requirements** → Define comprehensive reporting and analytics requirements
+3. **build-spreadsheet** → Create data processing and calculation engines
+4. **build-slides** → Design executive dashboards and presentation templates
+5. **build-code** → Implement automated data pipelines and report generation
+6. **check-tests** → Validate data accuracy and report consistency
+7. **write-docs** → Document reporting processes and maintenance procedures
 
 ### Document Processing & Automation
-1. **learn-documents** (Haiku) → Analyze existing forms, contracts, or document templates
-2. **plan-requirements** (Opus) → Define document automation and generation requirements
-3. **build-documents** (Sonnet) → Create document templates, forms, and generation systems
-4. **build-code** (Sonnet) → Implement document automation pipelines and data integration
-5. **check-tests** (Haiku) → Validate document generation, forms, and data processing
-6. **write-docs** (Sonnet) → Document template usage and maintenance procedures
+1. **learn-documents** → Analyze existing forms, contracts, or document templates
+2. **plan-requirements** → Define document automation and generation requirements
+3. **build-documents** → Create document templates, forms, and generation systems
+4. **build-code** → Implement document automation pipelines and data integration
+5. **check-tests** → Validate document generation, forms, and data processing
+6. **write-docs** → Document template usage and maintenance procedures
 
 ### Complete Office Suite Integration
-1. **learn-documents** (Haiku) → Extract data and requirements from existing Word/PDF documents
-2. **learn-spreadsheet** (Sonnet) → Analyze data processing needs from extracted information
-3. **plan-requirements** (Opus) → Define comprehensive office automation workflow
-4. **build-spreadsheet** (Sonnet) → Create data processing and calculation models
-5. **build-documents** (Sonnet) → Generate professional reports and documentation
-6. **build-slides** (Sonnet) → Create presentation templates from document content
-7. **build-code** (Sonnet) → Implement end-to-end office automation system
-8. **check-tests** (Haiku) → Validate entire workflow from data input to document output
-9. **write-docs** (Sonnet) → Document complete office automation system
+1. **learn-documents** → Extract data and requirements from existing Word/PDF documents
+2. **learn-spreadsheet** → Analyze data processing needs from extracted information
+3. **plan-requirements** → Define comprehensive office automation workflow
+4. **build-spreadsheet** → Create data processing and calculation models
+5. **build-documents** → Generate professional reports and documentation
+6. **build-slides** → Create presentation templates from document content
+7. **build-code** → Implement end-to-end office automation system
+8. **check-tests** → Validate entire workflow from data input to document output
+9. **write-docs** → Document complete office automation system
